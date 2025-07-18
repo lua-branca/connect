@@ -11,15 +11,19 @@ export default async function BlogPage() {
 
   // 年別アーカイブデータを処理
   const yearCounts = archiveData.yearArchives.reduce((acc: any, post: any) => {
-    const year = post.year
-    acc[year] = (acc[year] || 0) + 1
+    if (post.year) {
+      const year = post.year
+      acc[year] = (acc[year] || 0) + 1
+    }
     return acc
   }, {})
 
   // 月別アーカイブデータを処理
   const monthCounts = archiveData.yearArchives.reduce((acc: any, post: any) => {
-    const yearMonth = `${post.year}-${post.month.toString().padStart(2, '0')}`
-    acc[yearMonth] = (acc[yearMonth] || 0) + 1
+    if (post.year && post.month) {
+      const yearMonth = `${post.year}-${post.month.toString().padStart(2, '0')}`
+      acc[yearMonth] = (acc[yearMonth] || 0) + 1
+    }
     return acc
   }, {})
 
