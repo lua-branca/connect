@@ -145,7 +145,7 @@ AI活用アドバイザー 福田美佐子
           </h1>
           <p className="text-xl max-w-3xl mx-auto" style={{color: '#2D5A5A', opacity: 0.8}}>
             あなたの会社の困りごとをAIで解決しませんか？<br />
-            まずは無料相談からお始めください。
+            まずはお気軽にお問い合わせください。
           </p>
         </div>
 

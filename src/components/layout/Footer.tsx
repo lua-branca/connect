@@ -11,8 +11,8 @@ const Footer = () => {
       links: [
         { name: 'ホーム', href: '/' },
         { name: 'サービス', href: '/services' },
-        { name: '更新情報', href: '/updates' },
         { name: 'プロフィール', href: '/profile' },
+        { name: '更新情報', href: '/updates' },
         { name: 'お問い合わせ', href: '/contact' },
       ],
     },

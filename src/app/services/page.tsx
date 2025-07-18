@@ -36,9 +36,9 @@ export default function ServicesPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-6xl mx-auto">
 
-        {/* サービスの特徴 */}
+        {/* 私たちの強み */}
         <div className="rounded-2xl p-8 mb-16" style={{background: 'linear-gradient(135deg, #F8FBFA 0%, #E8F5E8 100%)'}}>
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>サービスの特徴</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>私たちの強み</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#E0F2F1'}}>
@@ -75,19 +75,9 @@ export default function ServicesPage() {
           {/* 提供者について */}
           <div className="text-center mt-8 p-6 bg-white/60 backdrop-blur-sm rounded-xl">
             <p className="text-lg leading-relaxed" style={{color: '#2D5A5A'}}>
-              <span className="font-semibold">IT業界20年の経験</span>を持つ福田美佐子が、
-              現場で本当に使える実践的なソリューションをご提案します。
+              <span className="font-semibold">豊富な実務経験</span>を基に、
+              現場で確実に成果を出せるソリューションをご提案します。
             </p>
-            <div className="mt-4">
-              <Link
-                href="/profile"
-                className="inline-flex items-center text-sm font-medium hover:underline"
-                style={{color: '#5BBCB6'}}
-              >
-                詳しいプロフィールを見る
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
-            </div>
           </div>
         </div>
 
@@ -293,22 +283,14 @@ export default function ServicesPage() {
           <p className="text-xl mb-8" style={{color: '#2D5A5A', opacity: 0.9}}>
             あなたのビジネス課題をお聞かせください。最適なソリューションをご提案いたします。
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 font-bold rounded-lg transition-colors shadow-lg"
-              style={{backgroundColor: '#F6E96B', color: '#2D5A5A'}}
+              className="inline-flex items-center px-12 py-5 text-xl font-bold rounded-2xl transition-all transform hover:scale-110 shadow-2xl hover:shadow-3xl animate-pulse"
+              style={{backgroundColor: '#F6E96B', color: '#2D5A5A', boxShadow: '0 0 30px rgba(246, 233, 107, 0.5)'}}
             >
-              <Mail className="w-5 h-5 mr-2" />
-              無料相談を申し込む
-            </Link>
-            <Link
-              href="/profile"
-              className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm font-medium rounded-lg hover:bg-white/90 transition-colors border border-white/50"
-              style={{color: '#2D5A5A'}}
-            >
-              <User className="w-5 h-5 mr-2" />
-              プロフィールを見る
+              <Mail className="w-6 h-6 mr-3" />
+              お問い合わせ
             </Link>
           </div>
         </div>

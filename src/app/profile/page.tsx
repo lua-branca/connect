@@ -319,19 +319,11 @@ export default async function ProfilePage() {
             皆様のビジネスの成長、そしてより豊かな社会の実現に向けて、
             私の経験と情熱を最大限に活かして貢献できることを楽しみにしております。
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center px-10 py-5 font-bold text-lg rounded-xl transition-all transform hover:scale-105 shadow-xl"
-              style={{backgroundColor: '#F6E96B', color: '#2D5A5A'}}
-            >
-              <Target className="w-6 h-6 mr-3" />
-              サービス詳細を見る
-            </Link>
+          <div className="flex justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-10 py-5 text-white font-bold text-lg rounded-xl transition-all transform hover:scale-105 shadow-xl"
-              style={{backgroundColor: '#2D5A5A'}}
+              className="inline-flex items-center px-12 py-5 text-xl font-bold rounded-2xl transition-all transform hover:scale-110 shadow-2xl hover:shadow-3xl animate-pulse"
+              style={{backgroundColor: '#F6E96B', color: '#2D5A5A', boxShadow: '0 0 30px rgba(246, 233, 107, 0.5)'}}
             >
               <Mail className="w-6 h-6 mr-3" />
               お問い合わせ

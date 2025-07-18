@@ -40,41 +40,32 @@ export default async function Home() {
       <section className="relative overflow-hidden" style={{background: 'linear-gradient(135deg, #A8D5D0 0%, #5BBCB6 100%)'}}>
         {/* 装飾的な背景要素 */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-64 h-64 rounded-full opacity-20" style={{background: '#F6E96B'}}></div>
-          <div className="absolute bottom-20 left-20 w-48 h-48 rounded-full opacity-15" style={{background: '#2D5A5A'}}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-10" style={{background: 'radial-gradient(circle, #F6E96B 0%, transparent 70%)'}}></div>
+          <div className="absolute top-20 right-20 w-64 h-64 rounded-full opacity-20 animate-pulse" style={{background: '#F6E96B'}}></div>
+          <div className="absolute bottom-20 left-20 w-48 h-48 rounded-full opacity-15 animate-bounce" style={{background: '#2D5A5A', animationDuration: '3s'}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-10 animate-spin" style={{background: 'radial-gradient(circle, #F6E96B 0%, transparent 70%)', animationDuration: '20s'}}></div>
         </div>
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[400px]">
             {/* 左側: テキストコンテンツ */}
             <div className="text-left space-y-6">
-              <div className="mb-6">
+              <div className="mb-6 animate-in fade-in-50 slide-in-from-left-4 duration-700">
                 <span className="inline-block px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium" style={{color: '#2D5A5A'}}>
                   ビジネスの困りごとをAIで解決
                 </span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight" style={{color: '#2D5A5A'}}>
-                あなたの会社が<br />
-                <span style={{color: '#F6E96B', textShadow: '0 2px 4px rgba(0,0,0,0.1)'}}>自分でAIを使える</span><br />
-                ようになります
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight animate-in fade-in-50 slide-in-from-left-4 duration-1000 delay-300" style={{color: '#2D5A5A'}}>
+                やりたいことが見えれば<br />
+                <span style={{color: '#F6E96B', textShadow: '0 2px 4px rgba(0,0,0,0.1)'}}>AIで実現できる</span>
               </h1>
-              <p className="text-lg md:text-xl mb-8 leading-relaxed" style={{color: '#2D5A5A', opacity: 0.8}}>
-                日々の困りごとをAIでスピーディに解決し、<br />
-                継続的に自社でAI活用できる体制を構築します
+              <p className="text-lg md:text-xl mb-8 leading-relaxed animate-in fade-in-50 slide-in-from-left-4 duration-1000 delay-500" style={{color: '#2D5A5A', opacity: 0.8}}>
+                目的を明確にし、それを実現するために<br />
+                AIを使いこなすまでをサポートします
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg"
-                  style={{backgroundColor: '#F6E96B', color: '#2D5A5A'}}
-                >
-                  <Zap className="w-5 h-5 mr-2" />
-                  無料相談を申し込む
-                </Link>
+              <div className="flex justify-start mb-8 animate-in fade-in-50 slide-in-from-left-4 duration-1000 delay-700">
                 <Link
                   href="/services"
-                  className="inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm font-medium rounded-xl hover:bg-white/90 transition-colors border border-white/50"
+                  className="inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm font-medium rounded-xl hover:bg-white/90 hover:scale-105 transition-all duration-300 border border-white/50"
                   style={{color: '#2D5A5A'}}
                 >
                   サービス詳細を見る
@@ -83,25 +74,48 @@ export default async function Home() {
               </div>
             </div>
             
-            {/* 右側: 視覚的要素 */}
+            {/* 右側: サービスの流れ */}
             <div className="relative order-first lg:order-last">
               <div className="relative z-10">
-                {/* メインの視覚的要素 */}
-                <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: '#5BBCB6'}}>
-                        <Brain className="w-6 h-6 text-white" />
+                {/* サービスの3ステップ */}
+                <div className="space-y-6">
+                  {/* STEP 1 */}
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl transform hover:scale-105 transition-all duration-300 animate-in fade-in-50 slide-in-from-right-4 delay-500">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style={{backgroundColor: '#5BBCB6'}}>
+                        1
                       </div>
                       <div>
-                        <h3 className="font-semibold" style={{color: '#2D5A5A'}}>AI導入相談</h3>
-                        <p className="text-sm opacity-70">相談可能</p>
+                        <h3 className="font-semibold" style={{color: '#2D5A5A'}}>目的を明確化</h3>
+                        <p className="text-sm opacity-70">やりたいことを整理</p>
                       </div>
                     </div>
-                    <div className="w-full h-2 bg-gray-200 rounded-full">
-                      <div className="h-2 rounded-full" style={{backgroundColor: '#F6E96B', width: '85%'}}></div>
+                  </div>
+                  
+                  {/* STEP 2 */}
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl transform hover:scale-105 transition-all duration-300 ml-4 animate-in fade-in-50 slide-in-from-right-4 delay-700">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style={{backgroundColor: '#F6E96B', color: '#2D5A5A'}}>
+                        2
+                      </div>
+                      <div>
+                        <h3 className="font-semibold" style={{color: '#2D5A5A'}}>AI活用提案</h3>
+                        <p className="text-sm opacity-70">最適な方法を選定</p>
+                      </div>
                     </div>
-                    <div className="text-xs opacity-60">進行状況: 85% 完了</div>
+                  </div>
+                  
+                  {/* STEP 3 */}
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl transform hover:scale-105 transition-all duration-300 animate-in fade-in-50 slide-in-from-right-4 delay-900">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style={{backgroundColor: '#5BBCB6'}}>
+                        3
+                      </div>
+                      <div>
+                        <h3 className="font-semibold" style={{color: '#2D5A5A'}}>使いこなし支援</h3>
+                        <p className="text-sm opacity-70">継続的にサポート</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
@@ -112,21 +126,6 @@ export default async function Home() {
             </div>
           </div>
           
-          {/* 統計情報 */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-16">
-            <div className="text-center">
-              <div className="text-2xl font-bold" style={{color: '#2D5A5A'}}>課題解決</div>
-              <div className="text-sm opacity-70" style={{color: '#2D5A5A'}}>スピーディに</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold" style={{color: '#2D5A5A'}}>自立運用</div>
-              <div className="text-sm opacity-70" style={{color: '#2D5A5A'}}>できるように</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold" style={{color: '#2D5A5A'}}>スピーディ</div>
-              <div className="text-sm opacity-70" style={{color: '#2D5A5A'}}>回答</div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -139,25 +138,21 @@ export default async function Home() {
                 なぜAI活用で成果が出るのか
               </h2>
               <p className="text-lg text-gray-600">
-                IT業界15年の経験から見えてきた、AI導入成功の秘訣
+                3つの重要な要素でAI導入を成功に導きます
               </p>
             </div>
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center p-6 rounded-xl" style={{backgroundColor: '#F0FFFE'}}>
-                <div className="text-4xl font-bold mb-2" style={{color: '#5BBCB6'}}>15年</div>
-                <div className="text-sm" style={{color: '#2D5A5A'}}>IT業界での経験</div>
-              </div>
-              <div className="text-center p-6 rounded-xl" style={{backgroundColor: '#FFFEF0'}}>
-                <div className="text-4xl font-bold mb-2" style={{color: '#F6E96B'}}>スピーディ</div>
-                <div className="text-sm" style={{color: '#2D5A5A'}}>初回返答</div>
-              </div>
-              <div className="text-center p-6 rounded-xl" style={{backgroundColor: '#F0FFFE'}}>
-                <div className="text-4xl font-bold mb-2" style={{color: '#5BBCB6'}}>実践重視</div>
-                <div className="text-sm" style={{color: '#2D5A5A'}}>現場で使える手法</div>
+                <div className="text-4xl font-bold mb-2" style={{color: '#5BBCB6'}}>実用性重視</div>
+                <div className="text-sm" style={{color: '#2D5A5A'}}>現場で実際に使える</div>
               </div>
               <div className="text-center p-6 rounded-xl" style={{backgroundColor: '#FFFEF0'}}>
                 <div className="text-4xl font-bold mb-2" style={{color: '#F6E96B'}}>継続支援</div>
-                <div className="text-sm" style={{color: '#2D5A5A'}}>導入後もサポート</div>
+                <div className="text-sm" style={{color: '#2D5A5A'}}>導入後も長期サポート</div>
+              </div>
+              <div className="text-center p-6 rounded-xl" style={{backgroundColor: '#F0FFFE'}}>
+                <div className="text-4xl font-bold mb-2" style={{color: '#5BBCB6'}}>個別対応</div>
+                <div className="text-sm" style={{color: '#2D5A5A'}}>一人ひとりに合わせた</div>
               </div>
             </div>
           </div>
@@ -296,7 +291,7 @@ export default async function Home() {
                 誰があなたをサポートするのか
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                IT業界で培った豊富な経験とAI技術への深い理解で、あなたのビジネス成長を支援します
+                実用性重視・継続支援・個別対応の3つの要素で、あなたのAI活用を成功に導きます
               </p>
             </div>
             
@@ -313,11 +308,11 @@ export default async function Home() {
                   />
                 </div>
                 <h3 className="text-2xl font-bold mb-4" style={{color: '#2D5A5A'}}>
-                  IT業界15年の実践経験
+                  あなたの目的に合わせたサポート
                 </h3>
                 <p className="mb-6 leading-relaxed" style={{color: '#2D5A5A', opacity: 0.8}}>
-                  大手IT企業での豊富なプロジェクト管理経験を活かし、AI技術をビジネスに効果的に導入する方法を熟知しています。
-                  特に業務効率化とマーケティング自動化の分野で多くの成功事例を持ちます。
+                  一人ひとりのやりたいことを丁寧にヒアリングし、現場で実際に使えるAI活用方法を提案します。
+                  導入後も継続的にサポートし、確実にAIを使いこなせるようになるまで伴走します。
                 </p>
                 <Link
                   href="/profile"
@@ -552,25 +547,17 @@ export default async function Home() {
             </h2>
             <p className="text-xl mb-8 leading-relaxed" style={{color: '#2D5A5A', opacity: 0.8}}>
               あなたの会社の課題をAIで解決しませんか？<br />
-              まずは無料相談からお始めください
+              まずはお気軽にお問い合わせください
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex justify-center mb-12">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 font-bold rounded-lg transition-all transform hover:scale-105 shadow-xl"
-                style={{backgroundColor: '#F6E96B', color: '#2D5A5A'}}
+                className="inline-flex items-center px-12 py-5 text-xl font-bold rounded-2xl transition-all transform hover:scale-110 shadow-2xl hover:shadow-3xl animate-pulse"
+                style={{backgroundColor: '#F6E96B', color: '#2D5A5A', boxShadow: '0 0 30px rgba(246, 233, 107, 0.5)'}}
               >
-                <Zap className="w-5 h-5 mr-2" />
-                無料相談を申し込む
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm font-medium rounded-lg hover:bg-white/90 transition-colors border border-white/50"
-                style={{color: '#2D5A5A'}}
-              >
-                サービス詳細を確認
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Mail className="w-6 h-6 mr-3" />
+                お問い合わせ
               </Link>
             </div>
             
@@ -592,29 +579,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 簡易お問い合わせセクション */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              まずは気軽にご相談ください
-            </h2>
-            <p className="text-gray-600 mb-8">
-              ご質問やお仕事のご依頼など、どんな些細なことでもお気軽にお問い合わせください。
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 font-medium rounded-lg transition-colors shadow-lg"
-                style={{backgroundColor: '#5BBCB6', color: '#FFFFFF'}}
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                お問い合わせフォーム
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
