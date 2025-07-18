@@ -1,0 +1,2231 @@
+
+> lua-branca@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.4.1
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.11.5:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 5.6s
+ ✓ Compiled / in 473ms (630 modules)
+ GET / 200 in 731ms
+ GET / 200 in 82ms
+ ✓ Compiled /favicon.ico in 118ms (419 modules)
+ GET /favicon.ico 200 in 347ms
+ ✓ Compiled in 493ms (242 modules)
+ GET / 200 in 80ms
+ ✓ Compiled /_not-found in 330ms (635 modules)
+ GET /blog 404 in 586ms
+ GET /blog 404 in 116ms
+ GET / 200 in 157ms
+ GET / 200 in 116ms
+ ✓ Compiled /favicon.ico in 123ms (419 modules)
+ GET /favicon.ico 200 in 323ms
+ ✓ Compiled in 179ms (242 modules)
+ GET / 200 in 105ms
+ ✓ Compiled in 173ms (242 modules)
+ GET / 200 in 56ms
+ ✓ Compiled in 66ms (242 modules)
+ GET / 200 in 32ms
+ ✓ Compiled in 91ms (242 modules)
+ GET / 200 in 41ms
+ ✓ Compiled in 81ms (242 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ✓ Compiled in 122ms (242 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1147ms (957 modules)
+ GET / 500 in 1857ms
+ GET / 200 in 91ms
+ GET / 200 in 17ms
+ GET / 200 in 18ms
+ GET / 200 in 141ms
+ ✓ Compiled in 103ms (389 modules)
+ ✓ Compiled in 67ms (389 modules)
+ GET / 200 in 84ms
+ GET / 200 in 33ms
+ GET / 200 in 83ms
+ ✓ Compiled in 166ms (957 modules)
+ GET / 200 in 108ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 1253ms (1690 modules)
+ GET /blog 200 in 3938ms
+ GET /blog 200 in 338ms
+ ✓ Compiled /favicon.ico in 291ms (1333 modules)
+ GET /favicon.ico 200 in 538ms
+ GET /blog 200 in 706ms
+ GET /favicon.ico 200 in 10ms
+ ✓ Compiled /_not-found in 436ms (1712 modules)
+ GET /blog/blog 404 in 544ms
+ GET /blog/blog 404 in 131ms
+ GET /blog 200 in 160ms
+ GET /blog/blog 404 in 28ms
+ GET /blog/blog 404 in 69ms
+ GET /blog 200 in 91ms
+ ✓ Compiled in 215ms (388 modules)
+ GET / 200 in 218ms
+ GET /blog 200 in 364ms
+ ✓ Compiled in 736ms (1690 modules)
+ GET /blog 200 in 659ms
+ GET / 200 in 804ms
+ GET /blog 200 in 37ms
+ GET / 200 in 38ms
+ ✓ Compiled in 229ms (1704 modules)
+ GET /blog 200 in 152ms
+ GET / 200 in 153ms
+ ○ Compiling /blog/[slug] ...
+ ✓ Compiled /blog/[slug] in 909ms (1704 modules)
+Error: Route "/blog/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/blog/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /blog/blog 200 in 2509ms
+ ✓ Compiled /favicon.ico in 349ms (1347 modules)
+ GET /favicon.ico 200 in 584ms
+ GET /blog 200 in 1376ms
+Error: Route "/blog/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/blog/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /blog/blog 200 in 213ms
+ GET /blog 200 in 84ms
+Error: Route "/blog/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/blog/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /blog/blog 200 in 106ms
+ ✓ Compiled in 850ms (1704 modules)
+Error: Route "/blog/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/blog/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /blog/blog 200 in 227ms
+ ✓ Compiled /profile in 457ms (1709 modules)
+ GET /profile 200 in 573ms
+ ✓ Compiled in 209ms (388 modules)
+ ✓ Compiled in 301ms (388 modules)
+ GET /profile 200 in 392ms
+ GET /profile 200 in 31ms
+ ✓ Compiled in 155ms (388 modules)
+ ✓ Compiled in 86ms (388 modules)
+ GET /profile 200 in 77ms
+ GET /profile 200 in 30ms
+ ✓ Compiled in 80ms (388 modules)
+ GET /profile 200 in 48ms
+ ✓ Compiled in 553ms (1724 modules)
+ GET /profile 200 in 3822ms
+ ✓ Compiled in 324ms (1724 modules)
+ GET /profile 200 in 111ms
+ ✓ Compiled in 304ms (1724 modules)
+ GET /profile 200 in 104ms
+ GET /profile 200 in 153ms
+ ✓ Compiled in 374ms (1724 modules)
+ GET /profile 200 in 109ms
+ ✓ Compiled in 335ms (1724 modules)
+ GET /profile 200 in 140ms
+ ✓ Compiled in 627ms (1724 modules)
+ GET /profile 200 in 193ms
+ GET /profile 200 in 516ms
+ ✓ Compiled /favicon.ico in 393ms (1353 modules)
+ GET /favicon.ico 200 in 680ms
+ GET /profile 200 in 373ms
+ ✓ Compiled in 266ms (388 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/profile'
+}
+ ✓ Compiled /_error in 751ms (1814 modules)
+ GET /profile 500 in 1185ms
+ GET /profile 200 in 163ms
+ GET /profile 200 in 2332ms
+ ✓ Compiled in 161ms (389 modules)
+ GET /profile 200 in 42ms
+ ✓ Compiled in 484ms (1811 modules)
+ GET /profile 200 in 323ms
+ ✓ Compiled in 594ms (1726 modules)
+ GET /profile 200 in 219ms
+ GET /profile 200 in 463ms
+ ✓ Compiled /favicon.ico in 280ms (1355 modules)
+ GET /favicon.ico 200 in 512ms
+ GET /profile 200 in 280ms
+ GET /favicon.ico 200 in 12ms
+   Reload env: .env.local
+ ✓ Compiled in 1015ms (1712 modules)
+ GET /profile 200 in 367ms
+ ✓ Compiled in 520ms (1726 modules)
+ GET /profile 200 in 103ms
+ ✓ Compiled in 296ms (1726 modules)
+ GET /profile 200 in 96ms
+ ✓ Compiled in 533ms (1726 modules)
+ GET /profile 200 in 114ms
+ ✓ Compiled in 339ms (1726 modules)
+ GET /profile 200 in 113ms
+ ✓ Compiled in 416ms (1726 modules)
+ GET /profile 200 in 158ms
+ GET /profile 200 in 1571ms
+ ✓ Compiled /favicon.ico in 266ms (1355 modules)
+ GET /favicon.ico 200 in 538ms
+ GET /profile 200 in 311ms
+ GET /favicon.ico 200 in 8ms
+ ✓ Compiled in 269ms (388 modules)
+ ✓ Compiled in 118ms (388 modules)
+ GET /profile 200 in 233ms
+ GET /profile 200 in 73ms
+ ✓ Compiled in 114ms (388 modules)
+ GET /profile 200 in 63ms
+ ✓ Compiled in 534ms (1726 modules)
+ GET /profile 200 in 3109ms
+ ✓ Compiled in 392ms (1726 modules)
+ GET /profile 200 in 87ms
+ ✓ Compiled in 687ms (1729 modules)
+ GET /profile 200 in 136ms
+ ✓ Compiled in 474ms (1732 modules)
+ GET /profile 200 in 88ms
+ GET /profile 200 in 388ms
+ ✓ Compiled /favicon.ico in 344ms (1361 modules)
+ GET /favicon.ico 200 in 616ms
+ ✓ Compiled in 718ms (1732 modules)
+ GET /profile 200 in 252ms
+ ✓ Compiled in 416ms (1732 modules)
+ GET /profile 200 in 151ms
+ ✓ Compiled in 428ms (1732 modules)
+ GET /profile 200 in 112ms
+ ✓ Compiled in 228ms (1732 modules)
+ GET /profile 200 in 72ms
+ GET /profile 200 in 465ms
+ ✓ Compiled /favicon.ico in 454ms (1361 modules)
+ GET /favicon.ico 200 in 717ms
+ GET /profile 200 in 377ms
+ ✓ Compiled in 601ms (1732 modules)
+ GET /profile 200 in 255ms
+ ✓ Compiled in 524ms (1732 modules)
+ GET /profile 200 in 124ms
+ ✓ Compiled in 355ms (1732 modules)
+ GET /profile 200 in 72ms
+ ✓ Compiled in 713ms (1732 modules)
+ GET /profile 200 in 77ms
+ ✓ Compiled in 383ms (1732 modules)
+ GET /profile 200 in 59ms
+ ✓ Compiled in 918ms (1718 modules)
+ GET /profile 200 in 84ms
+ ✓ Compiled in 651ms (1732 modules)
+ GET /profile 200 in 77ms
+ GET /profile 200 in 505ms
+ ✓ Compiled /favicon.ico in 330ms (1361 modules)
+ GET /favicon.ico 200 in 615ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 734ms (1722 modules)
+ GET /services 200 in 959ms
+ ✓ Compiled /_not-found in 404ms (1727 modules)
+ GET /contact 404 in 481ms
+ GET /contact 404 in 93ms
+ GET /profile 200 in 354ms
+ GET /blog 200 in 1247ms
+ GET / 200 in 28ms
+ GET /blog 200 in 97ms
+ ✓ Compiled in 1128ms (1736 modules)
+ GET /blog 200 in 815ms
+ GET /blog 200 in 17ms
+ ✓ Compiled in 697ms (1736 modules)
+ GET /blog 200 in 563ms
+ GET /blog 200 in 57ms
+ ✓ Compiled in 168ms (388 modules)
+ GET /blog 200 in 60ms
+ GET /blog 200 in 82ms
+ ✓ Compiled in 289ms (1722 modules)
+ GET /blog 200 in 69ms
+ ✓ Compiled in 1123ms (1739 modules)
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onClick} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '1184243244'
+}
+ GET /blog 200 in 347ms
+ ✓ Compiled in 389ms (1739 modules)
+ GET /blog 200 in 134ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 710ms (1742 modules)
+ GET /contact 200 in 781ms
+ GET /contact 200 in 259ms
+ ✓ Compiled /favicon.ico in 412ms (1375 modules)
+ GET /favicon.ico 200 in 670ms
+ GET /contact 200 in 73ms
+ GET /profile 200 in 641ms
+ GET /blog 200 in 199ms
+ GET /services 200 in 85ms
+ ✓ Compiled / in 208ms (1378 modules)
+ GET / 200 in 293ms
+ ✓ Compiled in 1612ms (1754 modules)
+ GET / 200 in 214ms
+ ✓ Compiled in 759ms (1754 modules)
+ GET / 200 in 107ms
+ ✓ Compiled in 841ms (1756 modules)
+ GET / 200 in 89ms
+ ✓ Compiled in 470ms (1756 modules)
+ GET / 200 in 177ms
+ ✓ Compiled in 1087ms (1756 modules)
+ GET / 200 in 147ms
+ ✓ Compiled in 1034ms (1756 modules)
+ GET / 200 in 120ms
+ ✓ Compiled in 537ms (1756 modules)
+ GET / 200 in 134ms
+ ✓ Compiled in 672ms (1755 modules)
+ GET / 200 in 98ms
+ ✓ Compiled in 444ms (1755 modules)
+ GET / 200 in 115ms
+ ✓ Compiled in 325ms (1755 modules)
+ GET / 200 in 158ms
+ ✓ Compiled in 430ms (1755 modules)
+ GET / 200 in 87ms
+ ✓ Compiled in 580ms (1755 modules)
+ GET / 200 in 91ms
+ GET / 200 in 372ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 557ms (1377 modules)
+ GET /favicon.ico 200 in 903ms
+ GET /profile 200 in 1778ms
+ GET / 200 in 332ms
+ GET /favicon.ico 200 in 20ms
+ ✓ Compiled in 976ms (1755 modules)
+ GET / 200 in 183ms
+ ✓ Compiled in 774ms (1755 modules)
+ GET / 200 in 97ms
+ GET / 200 in 265ms
+ ✓ Compiled /favicon.ico in 395ms (1377 modules)
+ GET /favicon.ico 200 in 708ms
+ GET / 200 in 128ms
+ GET / 200 in 265ms
+ GET / 200 in 778ms
+ GET /favicon.ico 200 in 24ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 1129ms (1363 modules)
+ GET /blog 200 in 45ms
+ GET /blog 200 in 3160ms
+ GET /blog 200 in 1637ms
+ ✓ Compiled in 924ms (1755 modules)
+ GET / 200 in 90ms
+ GET / 200 in 233ms
+ ✓ Compiled /favicon.ico in 187ms (1377 modules)
+ GET /favicon.ico 200 in 481ms
+ GET / 200 in 112ms
+ GET / 200 in 116ms
+ GET / 200 in 396ms
+ GET /favicon.ico 200 in 18ms
+ ✓ Compiled in 1016ms (1755 modules)
+ ✓ Compiled in 2.5s (1788 modules)
+ ✓ Compiled in 526ms (1788 modules)
+ ✓ Compiled in 695ms (1788 modules)
+ ✓ Compiled in 372ms (1788 modules)
+ ✓ Compiled in 444ms (1788 modules)
+ ✓ Compiled in 414ms (1788 modules)
+ ✓ Compiled in 372ms (1788 modules)
+ ✓ Compiled in 419ms (1788 modules)
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <... href=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... children=...>
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '4232916576'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <... href=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} children=...>
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2696238688'
+}
+ GET / 500 in 601ms
+ ✓ Compiled /favicon.ico in 474ms (1394 modules)
+ GET /favicon.ico 200 in 919ms
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <... href=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... children=...>
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '4232916576'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <... href=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} children=...>
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2696238688'
+}
+ GET / 500 in 556ms
+ GET /favicon.ico 200 in 7ms
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <... href=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... children=...>
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '4232916576'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <... href=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} children=...>
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2696238688'
+}
+ GET / 500 in 414ms
+ GET /favicon.ico 200 in 43ms
+ ✓ Compiled in 546ms (1805 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 3412ms
+ GET / 200 in 3055ms
+ GET /favicon.ico 200 in 92ms
+ GET /favicon.ico 200 in 6ms
+ ✓ Compiled in 1044ms (1788 modules)
+ GET / 200 in 308ms
+ GET / 200 in 65ms
+ GET / 200 in 233ms
+ ✓ Compiled /favicon.ico in 233ms (1394 modules)
+ GET /favicon.ico 200 in 476ms
+ ✓ Compiled in 754ms (1788 modules)
+ GET / 200 in 430ms
+ GET / 200 in 71ms
+ ✓ Compiled /favicon.ico in 175ms (1394 modules)
+ GET /favicon.ico 200 in 394ms
+ GET /favicon.ico 200 in 19ms
+ ✓ Compiled in 736ms (1805 modules)
+ GET / 200 in 227ms
+ GET / 200 in 57ms
+ GET /services 200 in 63ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 512ms (1397 modules)
+ GET /blog 200 in 3114ms
+ ✓ Compiled in 688ms (1808 modules)
+ GET / 200 in 332ms
+ GET / 200 in 84ms
+ ✓ Compiled in 432ms (1808 modules)
+ GET / 200 in 133ms
+ GET / 200 in 48ms
+ GET / 200 in 317ms
+ GET /favicon.ico 200 in 30ms
+ ✓ Compiled in 855ms (1788 modules)
+ GET / 200 in 263ms
+ GET / 200 in 38ms
+ ✓ Compiled in 553ms (1788 modules)
+ GET / 200 in 166ms
+ GET / 200 in 58ms
+ ✓ Compiled in 1085ms (1800 modules)
+ GET / 200 in 399ms
+ GET / 200 in 93ms
+ ✓ Compiled in 593ms (1800 modules)
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ GET / 200 in 2296ms
+ GET / 200 in 980ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 670ms (1406 modules)
+ GET /favicon.ico 200 in 906ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 952ms (1817 modules)
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter={function onMouseEnter} onMouseLeave=... aria-label=... children=...>
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '913922924'
+}
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <a href=... target="_blank" rel=... className=... style=... onMouseEnter=... onMouseLeave={function onMouseLeave} aria-label=... children=...>
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3826775276'
+}
+ GET / 500 in 3162ms
+ GET / 500 in 1469ms
+ GET /favicon.ico 200 in 63ms
+ GET /favicon.ico 200 in 14ms
+ GET /favicon.ico 200 in 5ms
+ ✓ Compiled in 476ms (1817 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 598ms
+ GET / 200 in 290ms
+ GET /favicon.ico 200 in 44ms
+ GET /favicon.ico 200 in 8ms
+ ✓ Compiled in 463ms (1817 modules)
+ GET / 200 in 140ms
+ GET / 200 in 39ms
+ ✓ Compiled in 724ms (1817 modules)
+ GET / 200 in 134ms
+ GET / 200 in 38ms
+ ✓ Compiled in 956ms (1800 modules)
+ GET / 200 in 337ms
+ GET / 200 in 66ms
+ ✓ Compiled in 674ms (1800 modules)
+ GET / 200 in 190ms
+ GET / 200 in 50ms
+ ✓ Compiled in 715ms (1800 modules)
+ GET / 200 in 147ms
+ GET / 200 in 47ms
+ ✓ Compiled in 410ms (1800 modules)
+ GET / 200 in 150ms
+ GET / 200 in 37ms
+ ✓ Compiled in 994ms (1800 modules)
+ GET / 200 in 291ms
+ GET / 200 in 51ms
+ ✓ Compiled in 2.8s (1800 modules)
+ GET / 200 in 238ms
+ GET / 200 in 49ms
+ ✓ Compiled in 982ms (1800 modules)
+ GET / 200 in 207ms
+ GET / 200 in 103ms
+ ✓ Compiled in 528ms (1800 modules)
+ GET / 200 in 169ms
+ GET / 200 in 36ms
+ GET /contact 200 in 60ms
+ ✓ Compiled in 1498ms (1800 modules)
+ GET / 200 in 551ms
+ GET / 200 in 162ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 549ms (1406 modules)
+ GET /favicon.ico 200 in 934ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 837ms (1817 modules)
+ GET / 200 in 152ms
+ GET / 200 in 42ms
+ ✓ Compiled in 1387ms (1800 modules)
+ GET / 200 in 254ms
+ GET / 200 in 45ms
+ ✓ Compiled in 508ms (1800 modules)
+ GET / 200 in 160ms
+ GET / 200 in 42ms
+ ✓ Compiled in 437ms (1800 modules)
+ GET / 200 in 210ms
+ GET / 200 in 213ms
+ ✓ Compiled in 941ms (1800 modules)
+ GET / 200 in 152ms
+ GET / 200 in 67ms
+ ✓ Compiled in 719ms (1800 modules)
+ GET / 200 in 156ms
+ GET / 200 in 42ms
+ ✓ Compiled in 684ms (1803 modules)
+ GET / 200 in 121ms
+ GET / 200 in 40ms
+ GET /profile 200 in 1730ms
+ GET / 200 in 320ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 671ms (1409 modules)
+ GET /favicon.ico 200 in 1104ms
+ ✓ Compiled in 1045ms (1803 modules)
+ GET / 200 in 487ms
+ GET / 200 in 111ms
+ ✓ Compiled /favicon.ico in 231ms (1409 modules)
+ GET /favicon.ico 200 in 462ms
+ GET /favicon.ico 200 in 10ms
+ ✓ Compiled in 799ms (1823 modules)
+ GET / 200 in 139ms
+ GET / 200 in 39ms
+ GET /profile 200 in 769ms
+ GET /profile 200 in 271ms
+ ✓ Compiled in 1199ms (1806 modules)
+ GET /profile 200 in 308ms
+ GET / 200 in 309ms
+ ⚠ Fast Refresh had to perform a full reload when /lua-branca/node_modules/next/dist/client/app-dir/link.js","ids":["__esModule","default"]}, /lua-branca/node_modules/next/dist/client/image-component.js","ids":[]} changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /profile 200 in 873ms
+ ✓ Compiled /favicon.ico in 259ms (1411 modules)
+ GET /favicon.ico 200 in 514ms
+ ✓ Compiled in 667ms (1823 modules)
+ GET /profile 200 in 200ms
+ GET / 200 in 203ms
+ ✓ Compiled in 1296ms (1806 modules)
+ GET /profile 200 in 258ms
+ GET / 200 in 264ms
+ ✓ Compiled in 819ms (1806 modules)
+ GET /profile 200 in 311ms
+ GET / 200 in 314ms
+ ✓ Compiled in 472ms (1806 modules)
+ GET /profile 200 in 143ms
+ GET / 200 in 144ms
+ ✓ Compiled in 611ms (1806 modules)
+ GET /profile 200 in 279ms
+ GET / 200 in 378ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 813ms (1411 modules)
+ GET /favicon.ico 200 in 1133ms
+ GET /favicon.ico 200 in 7ms
+ ✓ Compiled in 489ms (1823 modules)
+ GET /profile 200 in 159ms
+ GET / 200 in 160ms
+ ✓ Compiled in 464ms (1823 modules)
+ GET /profile 200 in 151ms
+ GET / 200 in 154ms
+ GET /services 200 in 88ms
+ ✓ Compiled in 1054ms (1805 modules)
+ GET /profile 200 in 368ms
+ GET / 200 in 374ms
+ ✓ Compiled in 812ms (1805 modules)
+ GET /profile 200 in 144ms
+ GET / 200 in 147ms
+ ✓ Compiled in 423ms (1805 modules)
+ GET /profile 200 in 130ms
+ GET / 200 in 138ms
+ GET / 200 in 163ms
+ GET /profile 200 in 461ms
+ ✓ Compiled in 1050ms (1805 modules)
+ GET /profile 200 in 136ms
+ GET / 200 in 140ms
+ ✓ Compiled in 757ms (1805 modules)
+ GET /profile 200 in 116ms
+ GET / 200 in 122ms
+ GET /profile 200 in 404ms
+ ✓ Compiled /favicon.ico in 474ms (1410 modules)
+ GET /favicon.ico 200 in 738ms
+ ✓ Compiled in 840ms (1805 modules)
+ GET /profile 200 in 362ms
+ GET / 200 in 369ms
+ GET /profile 200 in 374ms
+ ✓ Compiled /favicon.ico in 189ms (1410 modules)
+ GET /favicon.ico 200 in 485ms
+ GET / 200 in 370ms
+ ✓ Compiled in 768ms (1805 modules)
+ GET / 200 in 268ms
+ GET / 200 in 44ms
+ GET /profile 200 in 270ms
+ GET / 200 in 163ms
+ GET /profile 200 in 248ms
+ ✓ Compiled in 986ms (1805 modules)
+ GET /profile 200 in 239ms
+ GET / 200 in 248ms
+ GET /profile 200 in 287ms
+ ✓ Compiled in 471ms (1805 modules)
+ GET /profile 200 in 194ms
+ GET /profile 200 in 44ms
+ ✓ Compiled in 791ms (1805 modules)
+ GET /profile 200 in 121ms
+ GET /profile 200 in 39ms
+ ✓ Compiled in 980ms (1805 modules)
+ GET /profile 200 in 135ms
+ GET /profile 200 in 42ms
+ ✓ Compiled in 695ms (1806 modules)
+ GET /profile 200 in 115ms
+ GET /profile 200 in 43ms
+ ✓ Compiled in 969ms (1806 modules)
+ GET /profile 200 in 129ms
+ GET /profile 200 in 36ms
+ ✓ Compiled in 659ms (1804 modules)
+ GET /profile 200 in 72ms
+ GET /profile 200 in 56ms
+ ✓ Compiled in 703ms (1804 modules)
+ GET /profile 200 in 126ms
+ GET /profile 200 in 32ms
+ ⨯ ./src/app/profile/page.tsx
+Error:   [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/profile/page.tsx[0m:351:1]
+ [2m348[0m |       </div>
+ [2m349[0m |     </div>
+ [2m350[0m |   )
+ [2m351[0m | }
+     : [35;1m^[0m
+     `----
+  [31mx[0m Unexpected eof
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/profile/page.tsx[0m:351:1]
+ [2m348[0m |       </div>
+ [2m349[0m |     </div>
+ [2m350[0m |   )
+ [2m351[0m | }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/profile/page.tsx
+ ○ Compiling /_error ...
+ ⨯ ./src/app/profile/page.tsx
+Error:   [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/profile/page.tsx[0m:351:1]
+ [2m348[0m |       </div>
+ [2m349[0m |     </div>
+ [2m350[0m |   )
+ [2m351[0m | }
+     : [35;1m^[0m
+     `----
+  [31mx[0m Unexpected eof
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/profile/page.tsx[0m:351:1]
+ [2m348[0m |       </div>
+ [2m349[0m |     </div>
+ [2m350[0m |   )
+ [2m351[0m | }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/profile/page.tsx
+ GET /profile 500 in 2309ms
+ GET /profile 500 in 9ms
+ GET /profile 500 in 14ms
+ GET /profile 500 in 25ms
+ ✓ Compiled /_not-found in 932ms (1895 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /_next/static/webpack/dfdaefbfdf3be951.webpack.hot-update.json 404 in 1137ms
+ GET /_next/static/webpack/dfdaefbfdf3be951.webpack.hot-update.json 404 in 162ms
+ GET /profile 200 in 1927ms
+ GET /profile 200 in 214ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 637ms (1498 modules)
+ GET /favicon.ico 200 in 912ms
+ GET /favicon.ico 200 in 3ms
+ ✓ Compiled in 660ms (1912 modules)
+ GET /profile 200 in 240ms
+ GET /profile 200 in 34ms
+ ✓ Compiled in 894ms (1805 modules)
+ GET /profile 200 in 265ms
+ GET /profile 200 in 34ms
+ GET / 200 in 181ms
+ GET /profile 200 in 285ms
+ ✓ Compiled in 936ms (1805 modules)
+ GET /profile 200 in 240ms
+ GET /profile 200 in 36ms
+ ✓ Compiled in 773ms (1805 modules)
+ GET /profile 200 in 121ms
+ GET /profile 200 in 34ms
+ ✓ Compiled in 795ms (1805 modules)
+ GET /profile 200 in 102ms
+ GET /profile 200 in 31ms
+ GET / 200 in 167ms
+ ✓ Compiled in 845ms (1805 modules)
+ GET /profile 200 in 157ms
+ GET /profile 200 in 33ms
+ ✓ Compiled in 467ms (1805 modules)
+ GET /profile 200 in 109ms
+ GET /profile 200 in 43ms
+ ✓ Compiled in 946ms (1805 modules)
+ GET /profile 200 in 261ms
+ GET /profile 200 in 40ms
+ ✓ Compiled in 898ms (1806 modules)
+ GET /profile 200 in 112ms
+ GET /profile 200 in 36ms
+ GET /services 200 in 143ms
+ ✓ Compiled in 840ms (1806 modules)
+ GET /profile 200 in 279ms
+ GET /services 200 in 283ms
+ ✓ Compiled in 550ms (1806 modules)
+ GET /profile 200 in 126ms
+ GET /services 200 in 127ms
+ ✓ Compiled in 466ms (1806 modules)
+ GET /profile 200 in 111ms
+ GET /services 200 in 112ms
+ ✓ Compiled in 525ms (1806 modules)
+ GET /profile 200 in 239ms
+ GET /services 200 in 275ms
+ ✓ Compiled in 501ms (1806 modules)
+ GET /profile 200 in 122ms
+ GET /services 200 in 124ms
+ ✓ Compiled in 474ms (1806 modules)
+ GET /profile 200 in 141ms
+ GET /services 200 in 143ms
+ ✓ Compiled in 464ms (1806 modules)
+ GET /profile 200 in 137ms
+ GET /services 200 in 139ms
+ ✓ Compiled in 772ms (1806 modules)
+ GET /profile 200 in 234ms
+ GET /services 200 in 257ms
+ ✓ Compiled in 1054ms (1806 modules)
+ GET /profile 200 in 172ms
+ GET /services 200 in 176ms
+ GET / 200 in 99ms
+ GET /services 200 in 103ms
+ GET / 200 in 161ms
+ ⨯ ./src/app/services/page.tsx
+Error:   [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/services/page.tsx[0m:257:1]
+ [2m254[0m |       </div>
+ [2m255[0m |     </div>
+ [2m256[0m |   )
+ [2m257[0m | }
+     : [35;1m^[0m
+     `----
+  [31mx[0m Unexpected eof
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/services/page.tsx[0m:257:1]
+ [2m254[0m |       </div>
+ [2m255[0m |     </div>
+ [2m256[0m |   )
+ [2m257[0m | }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/services/page.tsx
+ ○ Compiling /_error ...
+ ⨯ ./src/app/services/page.tsx
+Error:   [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/services/page.tsx[0m:257:1]
+ [2m254[0m |       </div>
+ [2m255[0m |     </div>
+ [2m256[0m |   )
+ [2m257[0m | }
+     : [35;1m^[0m
+     `----
+  [31mx[0m Unexpected eof
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/services/page.tsx[0m:257:1]
+ [2m254[0m |       </div>
+ [2m255[0m |     </div>
+ [2m256[0m |   )
+ [2m257[0m | }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/services/page.tsx
+ GET /profile 500 in 1010ms
+ GET / 500 in 1011ms
+ GET / 500 in 11ms
+ GET /profile 500 in 37ms
+ ✓ Compiled /_not-found in 886ms (1882 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /_next/static/webpack/dfdaefbfdf3be951.webpack.hot-update.json 404 in 1398ms
+ GET /_next/static/webpack/dfdaefbfdf3be951.webpack.hot-update.json 404 in 313ms
+ GET / 200 in 362ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 901ms (1499 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 1302ms
+ GET /profile 200 in 1957ms
+ GET /_next/static/webpack/dfdaefbfdf3be951.webpack.hot-update.json 404 in 1342ms
+ GET /profile 200 in 1431ms
+ GET /services 200 in 117ms
+ ✓ Compiled in 754ms (1913 modules)
+ GET /profile 200 in 198ms
+ GET /services 200 in 201ms
+ ✓ Compiled in 501ms (1913 modules)
+ GET /profile 200 in 320ms
+ GET /services 200 in 326ms
+ GET /services 200 in 267ms
+ GET /favicon.ico 200 in 63ms
+ ✓ Compiled in 560ms (1910 modules)
+ GET /profile 200 in 111ms
+ GET /services 200 in 122ms
+ ✓ Compiled in 913ms (1893 modules)
+ GET /profile 200 in 423ms
+ GET /services 200 in 429ms
+ ✓ Compiled in 385ms (1893 modules)
+ GET /profile 200 in 164ms
+ GET /services 200 in 170ms
+ GET /profile 200 in 309ms
+ GET /services 200 in 76ms
+ ✓ Compiled in 701ms (1893 modules)
+ GET /profile 200 in 137ms
+ GET /services 200 in 139ms
+ GET /services 200 in 269ms
+ ✓ Compiled /favicon.ico in 219ms (1496 modules)
+ GET /favicon.ico 200 in 528ms
+ ✓ Compiled in 1322ms (1893 modules)
+ GET /profile 200 in 277ms
+ GET /services 200 in 295ms
+ ✓ Compiled in 1502ms (1895 modules)
+ GET /profile 200 in 182ms
+ GET /services 200 in 193ms
+ GET /services 200 in 314ms
+ ✓ Compiled /favicon.ico in 380ms (1498 modules)
+ GET /favicon.ico 200 in 696ms
+ ✓ Compiled in 1048ms (1895 modules)
+ GET /profile 200 in 436ms
+ GET /services 200 in 446ms
+ ✓ Compiled in 1441ms (1895 modules)
+ GET /profile 200 in 173ms
+ GET /services 200 in 184ms
+ ✓ Compiled in 614ms (1895 modules)
+ GET /profile 200 in 197ms
+ GET /services 200 in 203ms
+ ✓ Compiled in 993ms (1895 modules)
+ GET /profile 200 in 167ms
+ GET /services 200 in 169ms
+ ✓ Compiled in 1104ms (1895 modules)
+ GET /profile 200 in 279ms
+ GET /services 200 in 288ms
+ ✓ Compiled in 451ms (1895 modules)
+ GET /profile 200 in 159ms
+ GET /services 200 in 164ms
+ ✓ Compiled in 393ms (1895 modules)
+ GET /profile 200 in 135ms
+ GET /services 200 in 141ms
+ ✓ Compiled in 779ms (1895 modules)
+ GET /profile 200 in 134ms
+ GET /services 200 in 138ms
+ ✓ Compiled in 859ms (1895 modules)
+ GET /profile 200 in 200ms
+ GET /services 200 in 202ms
+ GET /services 200 in 320ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 584ms (1498 modules)
+ GET /favicon.ico 200 in 952ms
+ GET /profile 200 in 221ms
+ GET /profile 200 in 1603ms
+ GET /services 200 in 143ms
+ GET / 200 in 112ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 798ms (1484 modules)
+ GET /profile 200 in 391ms
+ GET /blog 200 in 28ms
+ GET /profile 200 in 115ms
+ GET /blog 200 in 2451ms
+ GET /contact 200 in 46ms
+ GET /profile 200 in 53ms
+ GET / 200 in 105ms
+ GET /services 200 in 494ms
+ GET / 200 in 151ms
+ GET /services 200 in 106ms
+ ✓ Compiled in 4s (1895 modules)
+ ✓ Compiled in 1084ms (1895 modules)
+ GET / 200 in 1739ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 2.1s (1498 modules)
+ GET /favicon.ico 200 in 2663ms
+ GET /services 200 in 954ms
+ GET /services 200 in 345ms
+ GET /services 200 in 230ms
+ GET /services 200 in 101ms
+ GET /services 200 in 45ms
+ GET /services 200 in 240ms
+ GET /profile 200 in 813ms
+ GET /contact 200 in 146ms
+ ✓ Compiled in 2.8s (1895 modules)
+ GET /contact 200 in 489ms
+ GET /contact 200 in 48ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 936ms (1484 modules)
+ GET /contact 200 in 134ms
+ GET /blog 200 in 2362ms
+ ✓ Compiled in 1286ms (1894 modules)
+ GET /contact 200 in 54ms
+ GET /contact 200 in 279ms
+ ✓ Compiled /favicon.ico in 262ms (1499 modules)
+ GET /favicon.ico 200 in 765ms
+ GET / 200 in 182ms
+ GET /contact 200 in 75ms
+ ✓ Compiled in 1131ms (1891 modules)
+ GET /contact 200 in 356ms
+ GET /contact 200 in 24ms
+ ✓ Compiled in 894ms (1891 modules)
+ GET /contact 200 in 132ms
+ GET /contact 200 in 38ms
+ GET / 200 in 102ms
+ GET / 200 in 234ms
+ ✓ Compiled /favicon.ico in 187ms (1496 modules)
+ GET /favicon.ico 200 in 466ms
+ GET /contact 200 in 106ms
+ GET /services 200 in 87ms
+ GET /contact 200 in 56ms
+ GET /profile 200 in 338ms
+ GET /services 200 in 67ms
+ GET /contact 200 in 20ms
+ ✓ Compiled in 1332ms (1891 modules)
+ GET /contact 200 in 261ms
+ GET /contact 200 in 25ms
+ ✓ Compiled in 1262ms (1893 modules)
+ GET /contact 200 in 163ms
+ GET /contact 200 in 124ms
+ GET /contact 200 in 305ms
+ ✓ Compiled /favicon.ico in 336ms (1497 modules)
+ GET /favicon.ico 200 in 701ms
+ ✓ Compiled in 2.9s (1893 modules)
+ GET /contact 200 in 455ms
+ ✓ Compiled /favicon.ico in 359ms (1497 modules)
+ GET /favicon.ico 200 in 786ms
+ ✓ Compiled in 1557ms (1893 modules)
+ GET /contact 200 in 264ms
+ ✓ Compiled in 1590ms (1893 modules)
+ GET /contact 200 in 91ms
+ ✓ Compiled in 496ms (1893 modules)
+ GET /contact 200 in 96ms
+ GET /contact 200 in 283ms
+ ✓ Compiled /favicon.ico in 327ms (1497 modules)
+ GET /favicon.ico 200 in 730ms
+ GET /contact 200 in 635ms
+ GET /contact 200 in 45ms
+ GET /contact 200 in 19ms
+ GET /contact 200 in 40ms
+ GET /profile 200 in 606ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 2s (1483 modules)
+ GET /blog 200 in 2641ms
+ GET /blog 200 in 247ms
+ GET /blog 200 in 158ms
+ GET / 200 in 201ms
+ GET /blog 200 in 246ms
+ ✓ Compiled in 2.2s (1883 modules)
+ GET /blog 200 in 387ms
+ ○ Compiling /blog/[slug] ...
+ ✓ Compiled /blog/[slug] in 973ms (1483 modules)
+Error: Route "/blog/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/blog/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /blog/blog 200 in 1894ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.1s (1056 modules)
+ GET /blog 404 in 1803ms
+ GET /blog 404 in 38ms
+ GET /blog 404 in 41ms
+ GET /blog 404 in 25ms
+ GET /blog 404 in 34ms
+ GET /blog 404 in 30ms
+ GET /blog 404 in 44ms
+ GET /blog 404 in 37ms
+ GET /blog 404 in 20ms
+ GET /blog 404 in 179ms
+ GET /blog 404 in 67ms
+ GET /blog 404 in 83ms
+ GET / 200 in 148ms
+ ✓ Compiled in 398ms (413 modules)
+ GET / 200 in 346ms
+ ✓ Compiled in 396ms (413 modules)
+ GET / 200 in 107ms
+ ✓ Compiled in 235ms (413 modules)
+ ✓ Compiled in 152ms (413 modules)
+ GET / 200 in 138ms
+ GET / 200 in 100ms
+ ✓ Compiled in 316ms (413 modules)
+ ✓ Compiled in 80ms (413 modules)
+ GET / 200 in 219ms
+ GET / 200 in 43ms
+ ✓ Compiled in 381ms (413 modules)
+ ✓ Compiled in 207ms (413 modules)
+ GET / 200 in 221ms
+ GET / 200 in 77ms
+ GET /contact 200 in 126ms
+ ✓ Compiled in 1497ms (1053 modules)
+ GET / 200 in 334ms
+ ✓ Compiled in 918ms (1053 modules)
+ GET / 200 in 103ms
+ ✓ Compiled in 532ms (1053 modules)
+ GET / 200 in 114ms
+ ✓ Compiled /_not-found in 206ms (643 modules)
+ GET /privacy 404 in 329ms
+ GET /privacy 404 in 24ms
+ GET /privacy 404 in 199ms
+ GET / 200 in 201ms
+ ○ Compiling /updates ...
+ ✓ Compiled /updates in 861ms (1862 modules)
+ GET /updates 200 in 1149ms
+ GET /updates 200 in 438ms
+ GET /updates 200 in 2153ms
+ GET /updates 200 in 38ms
+ ○ Compiling /updates/[slug] ...
+ ✓ Compiled /updates/[slug] in 946ms (1870 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/2023 200 in 2821ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 583ms
+ ✓ Compiled in 2s (1872 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 255ms
+ ⨯ ./src/app/updates/[slug]/page.tsx
+Error:   [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/updates/[slug]/page.tsx[0m:165:1]
+ [2m162[0m |       </div>
+ [2m163[0m |     </div>
+ [2m164[0m |   )
+ [2m165[0m | }
+     : [35;1m^[0m
+     `----
+  [31mx[0m Unexpected eof
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/updates/[slug]/page.tsx[0m:165:1]
+ [2m162[0m |       </div>
+ [2m163[0m |     </div>
+ [2m164[0m |   )
+ [2m165[0m | }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/updates/[slug]/page.tsx
+ GET /updates/blog 500 in 220ms
+ GET /updates/blog 500 in 19ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 849ms (1875 modules)
+ GET /_next/static/webpack/dfdaefbfdf3be951.webpack.hot-update.json 404 in 1231ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ ⨯ ReferenceError: ArrowRight is not defined
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:199:19)
+  197 |                     </div>
+  198 |                   </div>
+> 199 |                   <ArrowRight className="w-5 h-5 ml-3 flex-shrink-0" style={{color: '#5BBCB6'}} />
+      |                   ^
+  200 |                 </Link>
+  201 |               </div>
+  202 |             </div> {
+  digest: '2565229827'
+}
+ GET /updates/blog 500 in 2877ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 2.3s (1479 modules)
+ GET /favicon.ico 200 in 2656ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 2.1s (1872 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 2598ms
+ ✓ Compiled /favicon.ico in 452ms (1476 modules)
+ GET /favicon.ico 200 in 815ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 523ms
+ GET /favicon.ico 200 in 10ms
+ GET /updates 200 in 291ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 217ms
+ ⨯ ./src/app/updates/[slug]/page.tsx
+Error:   [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/updates/[slug]/page.tsx[0m:365:1]
+ [2m362[0m |       </div>
+ [2m363[0m |     </div>
+ [2m364[0m |   )
+ [2m365[0m | }
+     : [35;1m^[0m
+     `----
+  [31mx[0m Unexpected eof
+     ,-[[36;1;4m/Users/lua_branca/Desktop/Claude_dev/lua-branca/src/app/updates/[slug]/page.tsx[0m:365:1]
+ [2m362[0m |       </div>
+ [2m363[0m |     </div>
+ [2m364[0m |   )
+ [2m365[0m | }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/updates/[slug]/page.tsx
+ GET /updates/blog 500 in 20ms
+ GET /updates/blog 500 in 16ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.5s (1861 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /_next/static/webpack/dfdaefbfdf3be951.webpack.hot-update.json 404 in 3344ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 1031ms
+ ✓ Compiled /favicon.ico in 375ms (1479 modules)
+ GET /favicon.ico 200 in 792ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 780ms
+ GET /favicon.ico 200 in 13ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/blog 200 in 2046ms
+ GET /favicon.ico 200 in 38ms
+ GET /updates 200 in 1323ms
+ GET / 200 in 193ms
+ GET /updates 200 in 1056ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 661ms
+ ✓ Compiled in 3.9s (1872 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 446ms
+ ✓ Compiled in 1095ms (413 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 130ms
+ ✓ Compiled in 314ms (413 modules)
+ ✓ Compiled in 139ms (413 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 288ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 43ms
+ ✓ Compiled in 317ms (413 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 51ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 1626ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1063ms (1476 modules)
+ GET /favicon.ico 200 in 1587ms
+ ○ Compiling /updates/tag/[slug] ...
+ ✓ Compiled /updates/tag/[slug] in 1532ms (1861 modules)
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:31:55)
+  29 |
+  30 | export default async function TagPage({ params }: PageProps) {
+> 31 |   const posts: BlogPost[] = await getPostsByTag(params.slug)
+     |                                                       ^
+  32 |   const tagName = tagNames[params.slug] || params.slug
+  33 |
+  34 |   if (!posts || posts.length === 0) {
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:32:34)
+  30 | export default async function TagPage({ params }: PageProps) {
+  31 |   const posts: BlogPost[] = await getPostsByTag(params.slug)
+> 32 |   const tagName = tagNames[params.slug] || params.slug
+     |                                  ^
+  33 |
+  34 |   if (!posts || posts.length === 0) {
+  35 |     notFound()
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:32:50)
+  30 | export default async function TagPage({ params }: PageProps) {
+  31 |   const posts: BlogPost[] = await getPostsByTag(params.slug)
+> 32 |   const tagName = tagNames[params.slug] || params.slug
+     |                                                  ^
+  33 |
+  34 |   if (!posts || posts.length === 0) {
+  35 |     notFound()
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at eval (src/app/updates/tag/[slug]/page.tsx:134:65)
+    at Array.filter (<anonymous>)
+    at eval (src/app/updates/tag/[slug]/page.tsx:134:32)
+    at Array.map (<anonymous>)
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:69:17)
+  132 |                   {/* その他のタグ */}
+  133 |                   <div className="flex flex-wrap items-center gap-2 mb-4">
+> 134 |                     {post.tags?.filter(tag => tag._id !== params.slug).map((tag) => (
+      |                                                                 ^
+  135 |                       <Link
+  136 |                         key={tag._id}
+  137 |                         href={`/updates/tag/${tag.slug?.current || tag._id}`}
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at eval (src/app/updates/tag/[slug]/page.tsx:166:30)
+    at Array.map (<anonymous>)
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:165:38)
+  164 |           <div className="flex flex-wrap justify-center gap-3">
+  165 |             {Object.entries(tagNames).map(([slug, name]) => (
+> 166 |               slug !== params.slug && (
+      |                              ^
+  167 |                 <Link
+  168 |                   key={slug}
+  169 |                   href={`/updates/tag/${slug}`}
+ GET /updates/tag/LoufT1DVxjE5SSAZX1VSfM 200 in 3044ms
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:31:55)
+  29 |
+  30 | export default async function TagPage({ params }: PageProps) {
+> 31 |   const posts: BlogPost[] = await getPostsByTag(params.slug)
+     |                                                       ^
+  32 |   const tagName = tagNames[params.slug] || params.slug
+  33 |
+  34 |   if (!posts || posts.length === 0) {
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:32:34)
+  30 | export default async function TagPage({ params }: PageProps) {
+  31 |   const posts: BlogPost[] = await getPostsByTag(params.slug)
+> 32 |   const tagName = tagNames[params.slug] || params.slug
+     |                                  ^
+  33 |
+  34 |   if (!posts || posts.length === 0) {
+  35 |     notFound()
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:32:50)
+  30 | export default async function TagPage({ params }: PageProps) {
+  31 |   const posts: BlogPost[] = await getPostsByTag(params.slug)
+> 32 |   const tagName = tagNames[params.slug] || params.slug
+     |                                                  ^
+  33 |
+  34 |   if (!posts || posts.length === 0) {
+  35 |     notFound()
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at eval (src/app/updates/tag/[slug]/page.tsx:134:65)
+    at Array.filter (<anonymous>)
+    at eval (src/app/updates/tag/[slug]/page.tsx:134:32)
+    at Array.map (<anonymous>)
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:69:17)
+  132 |                   {/* その他のタグ */}
+  133 |                   <div className="flex flex-wrap items-center gap-2 mb-4">
+> 134 |                     {post.tags?.filter(tag => tag._id !== params.slug).map((tag) => (
+      |                                                                 ^
+  135 |                       <Link
+  136 |                         key={tag._id}
+  137 |                         href={`/updates/tag/${tag.slug?.current || tag._id}`}
+Error: Route "/updates/tag/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at eval (src/app/updates/tag/[slug]/page.tsx:166:30)
+    at Array.map (<anonymous>)
+    at TagPage (src/app/updates/tag/[slug]/page.tsx:165:38)
+  164 |           <div className="flex flex-wrap justify-center gap-3">
+  165 |             {Object.entries(tagNames).map(([slug, name]) => (
+> 166 |               slug !== params.slug && (
+      |                              ^
+  167 |                 <Link
+  168 |                   key={slug}
+  169 |                   href={`/updates/tag/${slug}`}
+ GET /updates/tag/LoufT1DVxjE5SSAZX1VSHY 200 in 453ms
+ ✓ Compiled in 2.5s (1859 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 257ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 1453ms
+ ✓ Compiled in 2.8s (1859 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:17:59)
+  15 |
+  16 | export default async function BlogPostPage({ params }: PageProps) {
+> 17 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  18 |
+  19 |   if (!post) {
+  20 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 302ms
+ ✓ Compiled in 679ms (1859 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:18:59)
+  16 |
+  17 | export default async function BlogPostPage({ params }: PageProps) {
+> 18 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  19 |
+  20 |   if (!post) {
+  21 |     notFound()
+ GET /updates/claude-code-enterprise-site-development 200 in 212ms
+ ✓ Compiled in 576ms (1859 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates/claude-code-enterprise-site-development 200 in 106ms
+ ✓ Compiled in 484ms (1859 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates/claude-code-enterprise-site-development 200 in 160ms
+ ○ Compiling /api/og ...
+ ✓ Compiled /api/og in 879ms (620 modules)
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 4051ms
+ GET /updates 200 in 601ms
+ ✓ Compiled in 740ms (1859 modules)
+ GET /updates 200 in 265ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 1821ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1128ms (1462 modules)
+ GET / 200 in 1255ms
+ GET / 200 in 318ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1837ms (1892 modules)
+ GET /favicon.ico 200 in 2039ms
+ GET / 200 in 251ms
+ HEAD /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 2264ms
+ ✓ Compiled in 1175ms (1892 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 148ms
+ ✓ Compiled in 1117ms (1892 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 467ms
+ GET /updates 200 in 356ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 588ms
+ ✓ Compiled in 503ms (1892 modules)
+ GET /updates 200 in 113ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates/claude-code-enterprise-site-development 200 in 324ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 675ms
+ GET /api/og?title=AI%E5%B0%8E%E5%85%A5%E3%81%AE%E6%88%90%E5%8A%9F%E4%BA%8B%E4%BE%8B%EF%BC%9A%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%A7%E3%82%82%E5%AE%9F%E7%8F%BE%E5%8F%AF%E8%83%BD%E3%81%AA%E5%8A%B9%E7%8E%87%E5%8C%96&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2024%E5%B9%B412%E6%9C%8810%E6%97%A5 200 in 576ms
+ GET /api/og?title=Claude%E6%B4%BB%E7%94%A8%E8%A1%93%EF%BC%9A%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%82%92%E5%8A%B9%E7%8E%87%E5%8C%96%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95&category=%E6%B4%BB%E7%94%A8%E3%83%86%E3%82%A3%E3%83%83%E3%83%97%E3%82%B9&date=2024%E5%B9%B412%E6%9C%8805%E6%97%A5 200 in 644ms
+ ✓ Compiled in 684ms (1875 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates/claude-code-enterprise-site-development 200 in 1061ms
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 200 in 657ms
+ GET /updates 200 in 289ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 416ms
+ GET / 200 in 114ms
+ ✓ Compiled in 1490ms (1875 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 371ms
+ ✓ Compiled in 587ms (1875 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 170ms
+ ✓ Compiled in 1574ms (1875 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 193ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 2644ms
+ GET / 200 in 512ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 92ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 931ms (1479 modules)
+ GET /favicon.ico 200 in 1293ms
+ GET /updates 200 in 355ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 200 in 674ms
+ ✓ Compiled in 1508ms (413 modules)
+ GET /updates 200 in 275ms
+ GET /updates 200 in 1564ms
+ ○ Compiling /api/og ...
+ ✓ Compiled /api/og in 1100ms (221 modules)
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 500 in 1691ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates/claude-code-enterprise-site-development 200 in 560ms
+ GET /updates/claude-code-enterprise-site-development 200 in 1797ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E5%B0%8E%E5%85%A5%E3%81%AE%E6%88%90%E5%8A%9F%E4%BA%8B%E4%BE%8B%EF%BC%9A%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%A7%E3%82%82%E5%AE%9F%E7%8F%BE%E5%8F%AF%E8%83%BD%E3%81%AA%E5%8A%B9%E7%8E%87%E5%8C%96&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2024%E5%B9%B412%E6%9C%8810%E6%97%A5 500 in 169ms
+Expected style "zIndex: 10px" to be unitless
+Expected style "zIndex: 10px" to be unitless
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 550ms
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 500 in 553ms
+ GET /api/og?title=Claude%E6%B4%BB%E7%94%A8%E8%A1%93%EF%BC%9A%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%82%92%E5%8A%B9%E7%8E%87%E5%8C%96%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95&category=%E6%B4%BB%E7%94%A8%E3%83%86%E3%82%A3%E3%83%83%E3%83%97%E3%82%B9&date=2024%E5%B9%B412%E6%9C%8805%E6%97%A5 500 in 552ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E5%B0%8E%E5%85%A5%E3%81%AE%E6%88%90%E5%8A%9F%E4%BA%8B%E4%BE%8B%EF%BC%9A%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%A7%E3%82%82%E5%AE%9F%E7%8F%BE%E5%8F%AF%E8%83%BD%E3%81%AA%E5%8A%B9%E7%8E%87%E5%8C%96&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2024%E5%B9%B412%E6%9C%8810%E6%97%A5 500 in 444ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 500 in 140ms
+ GET /favicon.ico 200 in 29ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 500 in 267ms
+Expected style "zIndex: 10px" to be unitless
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E5%B0%8E%E5%85%A5%E3%81%AE%E6%88%90%E5%8A%9F%E4%BA%8B%E4%BE%8B%EF%BC%9A%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%A7%E3%82%82%E5%AE%9F%E7%8F%BE%E5%8F%AF%E8%83%BD%E3%81%AA%E5%8A%B9%E7%8E%87%E5%8C%96&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2024%E5%B9%B412%E6%9C%8810%E6%97%A5 500 in 402ms
+ GET /api/og?title=Claude%E6%B4%BB%E7%94%A8%E8%A1%93%EF%BC%9A%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%82%92%E5%8A%B9%E7%8E%87%E5%8C%96%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95&category=%E6%B4%BB%E7%94%A8%E3%83%86%E3%82%A3%E3%83%83%E3%83%97%E3%82%B9&date=2024%E5%B9%B412%E6%9C%8805%E6%97%A5 500 in 401ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 446ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 59ms
+ GET /updates/claude-code-enterprise-site-development 200 in 773ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 47ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 57ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 62ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 57ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 46ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E9%A1%A7%E5%AE%A2%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E5%90%91%E4%B8%8A&category=AI%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&date=2024%E5%B9%B411%E6%9C%8828%E6%97%A5 500 in 56ms
+ GET /favicon.ico 200 in 17ms
+ GET /updates 200 in 1885ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 500 in 227ms
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ GET /api/og?title=Claude%20Code%E3%81%A7%E4%BC%81%E6%A5%AD%E3%82%B5%E3%82%A4%E3%83%88%E6%A7%8B%E7%AF%89%EF%BC%9AAI%E9%96%8B%E7%99%BA%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%81%A8%E3%81%AE%E5%8D%94%E5%83%8D%E5%AE%9F%E8%B7%B5%E8%A8%98%E9%8C%B2&category=AI%E6%B4%BB%E7%94%A8%E4%BA%8B%E4%BE%8B&date=2025%E5%B9%B407%E6%9C%8818%E6%97%A5 500 in 121ms
+ GET /favicon.ico 200 in 141ms
+ ✓ Compiled in 2.9s (2113 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates/claude-code-enterprise-site-development 200 in 2064ms
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ GET /updates/claude-code-enterprise-site-development 200 in 61ms
+ ✓ Compiled /api/og-test in 316ms (623 modules)
+ HEAD /api/og-test 200 in 608ms
+ ✓ Compiled in 512ms (634 modules)
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at BlogPostPage (src/app/updates/[slug]/page.tsx:61:59)
+  59 |
+  60 | export default async function BlogPostPage({ params }: PageProps) {
+> 61 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  62 |
+  63 |   if (!post) {
+  64 |     notFound()
+Error: Route "/updates/[slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (src/app/updates/[slug]/page.tsx:19:59)
+  17 | // メタデータ生成関数
+  18 | export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+> 19 |   const post: BlogPost | null = await getPostBySlug(params.slug)
+     |                                                           ^
+  20 |
+  21 |   if (!post) {
+  22 |     return {
+ GET /updates/claude-code-enterprise-site-development 200 in 86ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 2s (1471 modules)
+ GET /contact 200 in 2579ms
+ GET /contact 200 in 49ms
+ ✓ Compiled /api/og in 200ms (224 modules)
+Expected style "zIndex: 10px" to be unitless
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [Error: Invalid value for CSS property "display". Allowed values: "flex" | "block" | "none" | "-webkit-box". Received: "inline-block".]
+}
+ HEAD /api/og?title=Test&category=AI&date=2025 500 in 792ms
+ GET /contact 200 in 296ms
+[?25h
