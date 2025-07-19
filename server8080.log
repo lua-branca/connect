@@ -1,0 +1,1052 @@
+   ▲ Next.js 15.4.1
+   - Local:        http://localhost:8080
+   - Network:      http://192.168.11.5:8080
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 1997ms (1521 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 3824ms
+ ✓ Compiled /favicon.ico in 231ms (1279 modules)
+ GET /favicon.ico 200 in 468ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 424ms
+ GET / 200 in 886ms
+ GET /favicon.ico 200 in 16ms
+ GET / 200 in 167ms
+ GET /favicon.ico 200 in 12ms
+ GET / 200 in 230ms
+ GET / 200 in 179ms
+ ✓ Compiled /services in 420ms (1543 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /services 200 in 605ms
+ GET / 200 in 86ms
+ GET /services 200 in 32ms
+ GET /services 200 in 209ms
+ ✓ Compiled in 958ms (1526 modules)
+ GET /services 200 in 347ms
+ GET /services 200 in 375ms
+ ✓ Compiled /updates in 323ms (1516 modules)
+ ⨯ TypeError: Cannot read properties of null (reading 'toString')
+    at eval (src/app/updates/page.tsx:21:49)
+    at Array.reduce (<anonymous>)
+    at BlogPage (src/app/updates/page.tsx:20:47)
+  19 |   // 月別アーカイブデータを処理
+  20 |   const monthCounts = archiveData.yearArchives.reduce((acc: any, post: any) => {
+> 21 |     const yearMonth = `${post.year}-${post.month.toString().padStart(2, '0')}`
+     |                                                 ^
+  22 |     acc[yearMonth] = (acc[yearMonth] || 0) + 1
+  23 |     return acc
+  24 |   }, {}) {
+  digest: '2269782149'
+}
+ GET /updates 200 in 1053ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 1026ms (1530 modules)
+ GET /services 200 in 520ms
+ GET /updates 200 in 2836ms
+ ✓ Compiled in 552ms (1530 modules)
+ GET /updates 200 in 179ms
+ GET /services 200 in 198ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 557ms (1531 modules)
+ GET /contact 200 in 643ms
+ ○ Compiling /profile ...
+ ✓ Compiled /profile in 505ms (1541 modules)
+ GET /profile 200 in 1509ms
+ ✓ Compiled /_not-found in 389ms (1545 modules)
+ GET /privacy 404 in 499ms
+ GET /profile 200 in 219ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 470ms
+ ✓ Compiled in 771ms (1542 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 729ms
+ GET /services 200 in 727ms
+ GET /services 200 in 71ms
+ GET / 200 in 68ms
+ ✓ Compiled in 950ms (1556 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /services 200 in 826ms
+ GET / 200 in 829ms
+ GET /services 200 in 78ms
+ GET / 200 in 78ms
+ ✓ Compiled in 746ms (1556 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /services 200 in 571ms
+ GET / 200 in 565ms
+ GET /services 200 in 61ms
+ GET / 200 in 31ms
+ ○ Compiling /privacy ...
+ ✓ Compiled /privacy in 526ms (1546 modules)
+ GET /privacy 200 in 665ms
+ ✓ Compiled /terms in 343ms (1548 modules)
+ GET /terms 200 in 450ms
+ ○ Compiling /sitemap ...
+ ✓ Compiled /sitemap in 525ms (1552 modules)
+ GET /sitemap 200 in 614ms
+ GET /updates 200 in 1879ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 281ms
+ ✓ Compiled in 878ms (1546 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /services 200 in 577ms
+ GET / 200 in 577ms
+ GET / 200 in 216ms
+ GET / 200 in 469ms
+ GET /updates 200 in 388ms
+ ✓ Compiled /_not-found in 278ms (1281 modules)
+ GET /updates122 404 in 587ms
+ GET /services 200 in 310ms
+ ✓ Compiled in 856ms (1546 modules)
+ ✓ Compiled /_not-found in 247ms (1281 modules)
+ GET /services 200 in 726ms
+ GET /updates122 404 in 732ms
+ GET /updates122 404 in 30ms
+ GET /services 200 in 97ms
+ GET /updates122 404 in 255ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 105ms
+ ✓ Compiled in 698ms (1547 modules)
+ GET /updates122 404 in 258ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 466ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 325ms
+ GET /updates122 404 in 195ms
+ ✓ Compiled in 416ms (1547 modules)
+ GET /updates122 404 in 268ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 412ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 498ms
+ GET /updates122 404 in 288ms
+ ✓ Compiled in 738ms (1545 modules)
+ ✓ Compiled /_not-found in 212ms (1280 modules)
+ GET /updates122 404 in 372ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 398ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 34ms
+ GET /updates122 404 in 174ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 241ms
+ GET /updates122 404 in 310ms
+ ✓ Compiled in 632ms (1546 modules)
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 125ms
+ GET /updates122 404 in 124ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 272ms
+ GET /updates122 404 in 191ms
+ GET /services%EF%BC%91%EF%BC%91%EF%BC%91 404 in 99ms
+ ✓ Compiled /favicon.ico in 304ms (1297 modules)
+ GET /favicon.ico 200 in 576ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 570ms
+ ✓ Compiled in 1002ms (1545 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 197ms (1280 modules)
+ GET / 200 in 732ms
+ GET /updates122 404 in 338ms
+ GET /updates122 404 in 168ms
+ GET /updates122 404 in 42ms
+ ✓ Compiled in 460ms (1546 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 54ms
+ GET / 200 in 195ms
+ GET /updates122 404 in 166ms
+ GET /updates 200 in 436ms
+ ✓ Compiled in 601ms (1545 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 133ms (1280 modules)
+ GET / 200 in 512ms
+ GET /updates122 404 in 448ms
+ GET /updates122 404 in 256ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 401ms
+ ✓ Compiled /favicon.ico in 245ms (1297 modules)
+ GET /favicon.ico 200 in 526ms
+ ✓ Compiled in 427ms (1563 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 261ms
+ GET / 200 in 305ms
+ GET /updates122 404 in 409ms
+ ✓ Compiled in 389ms (1563 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 156ms
+ GET / 200 in 165ms
+ GET /updates122 404 in 149ms
+ ✓ Compiled in 537ms (1563 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 205ms
+ GET / 200 in 247ms
+ GET /updates122 404 in 149ms
+ ✓ Compiled in 361ms (1546 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 330ms
+ GET /updates122 404 in 167ms
+ GET / 200 in 518ms
+ ○ Compiling /profile ...
+ ✓ Compiled /profile in 573ms (1289 modules)
+ GET /updates122 404 in 26ms
+ GET /profile 200 in 112ms
+ GET /updates122 404 in 86ms
+ GET /profile 200 in 1423ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 346ms
+ ✓ Compiled in 915ms (1550 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 272ms (1287 modules)
+ GET / 200 in 600ms
+ GET /updates122 404 in 440ms
+ GET /updates122 404 in 321ms
+ ✓ Compiled in 579ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 34ms
+ GET / 200 in 180ms
+ GET /updates122 404 in 216ms
+ ✓ Compiled in 747ms (1550 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 268ms (1287 modules)
+ GET / 200 in 786ms
+ GET /updates122 404 in 471ms
+ GET /updates122 404 in 141ms
+ ✓ Compiled in 552ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 178ms
+ GET / 200 in 200ms
+ GET /updates122 404 in 107ms
+ GET /updates122 404 in 49ms
+ ✓ Compiled in 521ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 164ms
+ GET /updates122 404 in 63ms
+ GET /updates122 404 in 127ms
+ GET /updates122 404 in 105ms
+ GET / 200 in 447ms
+ ✓ Compiled /favicon.ico in 367ms (1304 modules)
+ GET /favicon.ico 200 in 602ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 363ms
+ GET /favicon.ico 200 in 13ms
+ ✓ Compiled in 984ms (1550 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 369ms
+ ✓ Compiled /_not-found in 158ms (1287 modules)
+ GET /updates122 404 in 276ms
+ GET /updates122 404 in 247ms
+ ✓ Compiled in 500ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 140ms
+ GET /updates122 404 in 94ms
+ GET / 200 in 246ms
+ ✓ Compiled in 1111ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 172ms
+ GET / 200 in 229ms
+ GET /updates122 404 in 138ms
+ GET /updates122 404 in 49ms
+ ✓ Compiled in 415ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 152ms
+ GET / 200 in 184ms
+ GET /updates122 404 in 123ms
+ GET /profile 200 in 271ms
+ ✓ Compiled in 1019ms (1550 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 155ms (1287 modules)
+ GET / 200 in 446ms
+ GET /updates122 404 in 426ms
+ GET /updates122 404 in 162ms
+ ✓ Compiled in 688ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 47ms
+ GET / 200 in 166ms
+ GET /updates122 404 in 184ms
+ ✓ Compiled in 432ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 85ms
+ GET / 200 in 295ms
+ GET /updates122 404 in 134ms
+ ✓ Compiled in 501ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 313ms
+ GET /updates122 404 in 47ms
+ GET /updates122 404 in 81ms
+ GET /updates122 404 in 46ms
+ ✓ Compiled in 692ms (1550 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 161ms (1287 modules)
+ GET / 200 in 350ms
+ GET /updates122 404 in 293ms
+ GET /updates122 404 in 198ms
+ ✓ Compiled in 378ms (1553 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 118ms
+ GET / 200 in 296ms
+ GET /updates122 404 in 226ms
+ ✓ Compiled in 788ms (1550 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 260ms (1287 modules)
+ GET / 200 in 495ms
+ GET /updates122 404 in 415ms
+ GET /updates122 404 in 110ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 719ms
+ ✓ Compiled /favicon.ico in 364ms (1301 modules)
+ GET /favicon.ico 200 in 595ms
+ ✓ Compiled in 820ms (1550 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 299ms (1287 modules)
+ GET / 200 in 989ms
+ GET /updates122 404 in 476ms
+ GET /updates122 404 in 151ms
+ GET /profile 200 in 506ms
+ ✓ Compiled in 784ms (1553 modules)
+ GET /updates122 404 in 138ms
+ GET /profile 200 in 162ms
+ GET /updates122 404 in 319ms
+ ✓ Compiled /favicon.ico in 130ms (1304 modules)
+ ✓ Compiled in 579ms (1570 modules)
+ GET /profile 200 in 156ms
+ GET /updates122 404 in 48ms
+ GET /updates122 404 in 161ms
+ ✓ Compiled in 452ms (1570 modules)
+ GET /updates122 404 in 138ms
+ GET /profile 200 in 811ms
+ GET /updates122 404 in 521ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 281ms
+ ✓ Compiled in 443ms (1570 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 103ms
+ GET / 200 in 333ms
+ GET /updates122 404 in 143ms
+ GET / 200 in 383ms
+ GET /favicon.ico 200 in 21ms
+ GET /services 200 in 86ms
+ GET / 200 in 255ms
+ GET /services 200 in 106ms
+ GET /profile 200 in 334ms
+ ✓ Compiled in 670ms (1550 modules)
+ GET /profile 200 in 539ms
+ ✓ Compiled /_not-found in 491ms (1287 modules)
+ GET /updates122 404 in 757ms
+ GET /updates122 404 in 252ms
+ ✓ Compiled /contact in 489ms (1296 modules)
+ GET /contact 200 in 549ms
+ GET /updates122 404 in 26ms
+ GET /contact 200 in 106ms
+ GET /updates122 404 in 89ms
+ ✓ Compiled in 635ms (1562 modules)
+ GET /contact 200 in 164ms
+ GET /updates122 404 in 25ms
+ GET /updates122 404 in 88ms
+ GET /updates122 404 in 54ms
+ GET /services 200 in 152ms
+ ✓ Compiled in 379ms (1558 modules)
+ GET /updates122 404 in 61ms
+ GET /services 200 in 187ms
+ GET /updates122 404 in 186ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 385ms
+ GET /profile 200 in 297ms
+ ✓ Compiled in 827ms (1555 modules)
+ GET /profile 200 in 227ms
+ ✓ Compiled /_not-found in 223ms (1292 modules)
+ GET /updates122 404 in 307ms
+ GET /updates122 404 in 126ms
+ GET /profile 200 in 335ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 264ms
+ GET /profile 200 in 368ms
+ GET / 200 in 280ms
+ ✓ Compiled in 1324ms (1554 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 332ms
+ ✓ Compiled /_not-found in 129ms (1291 modules)
+ GET /updates122 404 in 452ms
+ GET /updates122 404 in 156ms
+ GET /services 200 in 89ms
+ GET /profile 200 in 353ms
+ ✓ Compiled in 1314ms (1554 modules)
+ GET /profile 200 in 509ms
+ ✓ Compiled /_not-found in 231ms (1291 modules)
+ GET /updates122 404 in 562ms
+ GET /updates122 404 in 105ms
+ ✓ Compiled in 375ms (1557 modules)
+ GET /profile 200 in 171ms
+ GET /updates122 404 in 79ms
+ GET /updates122 404 in 101ms
+ GET /updates122 404 in 42ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 638ms
+ ✓ Compiled in 451ms (266 modules)
+ ✓ Compiled in 140ms (266 modules)
+ GET /updates122 404 in 50ms
+ GET / 200 in 149ms
+ GET /updates122 404 in 22ms
+ GET / 200 in 71ms
+ GET /updates122 404 in 87ms
+ GET /updates122 404 in 41ms
+ ✓ Compiled in 805ms (1554 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 154ms (1291 modules)
+ GET / 200 in 627ms
+ GET /updates122 404 in 349ms
+ GET /updates122 404 in 117ms
+ ✓ Compiled in 452ms (1557 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 42ms
+ GET / 200 in 198ms
+ GET /updates122 404 in 96ms
+ GET /updates122 404 in 46ms
+ GET /services 200 in 211ms
+ ✓ Compiled in 397ms (1557 modules)
+ GET /updates122 404 in 105ms
+ GET /updates122 404 in 81ms
+ GET /services 200 in 190ms
+ ✓ Compiled in 7s (3227 modules)
+ GET /updates122 404 in 38ms
+ GET /services 200 in 277ms
+ GET /updates122 404 in 220ms
+ GET /updates122 404 in 238ms
+ ✓ Compiled in 1498ms (3227 modules)
+ GET /updates122 404 in 201ms
+ GET /services 200 in 238ms
+ GET /updates122 404 in 228ms
+ GET /updates122 404 in 77ms
+ ✓ Compiled in 628ms (3227 modules)
+ GET /updates122 404 in 108ms
+ GET /services 200 in 143ms
+ GET /updates122 404 in 137ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 1507ms (1555 modules)
+ ✓ Compiled in 1ms (1290 modules)
+ ✓ Compiled in 0ms (1290 modules)
+ ⨯ ReferenceError: Search is not defined
+    at Header (src/components/layout/Header.tsx:71:15)
+  69 |               onClick={() => setIsSearchOpen(true)}
+  70 |             >
+> 71 |               <Search className="h-5 w-5" />
+     |               ^
+  72 |             </button>
+  73 |
+  74 |             {/* モバイルメニューボタン */} {
+  digest: '395399069'
+}
+ GET /updates122 500 in 425ms
+ ⨯ ReferenceError: Search is not defined
+    at Header (src/components/layout/Header.tsx:71:15)
+  69 |               onClick={() => setIsSearchOpen(true)}
+  70 |             >
+> 71 |               <Search className="h-5 w-5" />
+     |               ^
+  72 |             </button>
+  73 |
+  74 |             {/* モバイルメニューボタン */} {
+  digest: '395399069'
+}
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 500 in 2714ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 613ms (1307 modules)
+ GET /favicon.ico 200 in 949ms
+ ✓ Compiled in 811ms (1572 modules)
+ ⨯ ReferenceError: Search is not defined
+    at Header (src/components/layout/Header.tsx:70:15)
+  68 |               onClick={() => setIsSearchOpen(true)}
+  69 |             >
+> 70 |               <Search className="h-5 w-5" />
+     |               ^
+  71 |             </button>
+  72 |
+  73 |             {/* モバイルメニューボタン */} {
+  digest: '395399069'
+}
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ReferenceError: Search is not defined
+    at Header (src/components/layout/Header.tsx:70:15)
+  68 |               onClick={() => setIsSearchOpen(true)}
+  69 |             >
+> 70 |               <Search className="h-5 w-5" />
+     |               ^
+  71 |             </button>
+  72 |
+  73 |             {/* モバイルメニューボタン */} {
+  digest: '395399069'
+}
+ GET /updates122 500 in 123ms
+ GET / 500 in 377ms
+ GET /favicon.ico 200 in 71ms
+ ✓ Compiled in 292ms (1572 modules)
+ ⨯ ReferenceError: SearchModal is not defined
+    at Header (src/components/layout/Header.tsx:102:9)
+  100 |         
+  101 |         {/* 検索モーダル */}
+> 102 |         <SearchModal
+      |         ^
+  103 |           isOpen={isSearchOpen}
+  104 |           onClose={() => setIsSearchOpen(false)}
+  105 |         /> {
+  digest: '4154500214'
+}
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⨯ ReferenceError: SearchModal is not defined
+    at Header (src/components/layout/Header.tsx:102:9)
+  100 |         
+  101 |         {/* 検索モーダル */}
+> 102 |         <SearchModal
+      |         ^
+  103 |           isOpen={isSearchOpen}
+  104 |           onClose={() => setIsSearchOpen(false)}
+  105 |         /> {
+  digest: '4154500214'
+}
+ GET /updates122 500 in 278ms
+ GET / 500 in 408ms
+ GET /favicon.ico 200 in 163ms
+ ✓ Compiled in 573ms (1572 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /updates122 404 in 54ms
+ GET / 200 in 2385ms
+ GET /favicon.ico 200 in 20ms
+ ✓ Compiled in 204ms (265 modules)
+ GET /updates122 404 in 43ms
+ GET / 200 in 143ms
+ GET /updates122 404 in 67ms
+ ✓ Compiled in 812ms (1555 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 830ms
+ GET / 200 in 884ms
+ GET /updates122 404 in 312ms
+ GET /updates122 404 in 84ms
+ GET /services 200 in 121ms
+ ✓ Compiled in 1136ms (1555 modules)
+ GET /updates122 404 in 29ms
+ GET /services 200 in 248ms
+ GET /updates122 404 in 220ms
+ ✓ Compiled in 508ms (1555 modules)
+ GET /updates122 404 in 36ms
+ GET /services 200 in 148ms
+ GET /updates122 404 in 42ms
+ ✓ Compiled in 825ms (1552 modules)
+ ✓ Compiled /_not-found in 158ms (1290 modules)
+ GET /updates122 404 in 576ms
+ GET /services 200 in 591ms
+ GET /updates122 404 in 141ms
+ GET /contact 200 in 112ms
+ GET /services 200 in 120ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /profile 200 in 254ms
+ GET / 200 in 1912ms
+ GET /updates 200 in 613ms
+ GET /contact 200 in 29ms
+ GET /updates 200 in 125ms
+ GET /profile 200 in 1312ms
+ GET /profile 200 in 161ms
+ GET /services 200 in 68ms
+ GET / 200 in 259ms
+ GET /services 200 in 90ms
+ GET / 200 in 326ms
+ GET /profile 200 in 1101ms
+ GET /services 200 in 175ms
+ GET /profile 200 in 205ms
+ ✓ Compiled in 2.8s (1552 modules)
+ ✓ Compiled /_not-found in 277ms (1290 modules)
+ GET /updates122 404 in 406ms
+ GET /updates122 404 in 161ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 815ms (1307 modules)
+ GET /profile 200 in 598ms
+ GET /favicon.ico 200 in 22ms
+ ✓ Compiled in 967ms (1552 modules)
+ GET /profile 200 in 1433ms
+ ✓ Compiled /_not-found in 280ms (1290 modules)
+ GET /updates122 404 in 479ms
+ GET /updates122 404 in 117ms
+ GET /updates122 404 in 91ms
+ ✓ Compiled in 877ms (1552 modules)
+ GET /profile 200 in 304ms
+ ✓ Compiled /_not-found in 300ms (1290 modules)
+ GET /updates122 404 in 417ms
+ GET /updates122 404 in 124ms
+ ✓ Compiled in 1502ms (1552 modules)
+ GET /profile 200 in 161ms
+ ✓ Compiled /_not-found in 164ms (1290 modules)
+ GET /updates122 404 in 283ms
+ GET /updates122 404 in 96ms
+ ✓ Compiled in 1284ms (1552 modules)
+ GET /profile 200 in 90ms
+ ✓ Compiled /_not-found in 254ms (1290 modules)
+ GET /updates122 404 in 365ms
+ GET /updates122 404 in 125ms
+ GET /updates122 404 in 49ms
+ ✓ Compiled in 1325ms (1552 modules)
+ GET /profile 200 in 139ms
+ ✓ Compiled /_not-found in 231ms (1290 modules)
+ GET /updates122 404 in 295ms
+ GET /updates122 404 in 104ms
+ ✓ Compiled in 1378ms (1552 modules)
+ GET /profile 200 in 102ms
+ ✓ Compiled /_not-found in 222ms (1290 modules)
+ GET /updates122 404 in 300ms
+ GET /updates122 404 in 101ms
+ GET /updates122 404 in 53ms
+ ✓ Compiled in 588ms (1555 modules)
+ GET /profile 200 in 83ms
+ GET /updates122 404 in 161ms
+ GET /updates122 404 in 80ms
+ ✓ Compiled in 1212ms (1555 modules)
+ GET /profile 200 in 123ms
+ GET /updates122 404 in 27ms
+ GET /updates122 404 in 109ms
+ GET /updates122 404 in 40ms
+ GET /profile 200 in 371ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 997ms (1307 modules)
+ GET /favicon.ico 200 in 1431ms
+ ✓ Compiled in 1105ms (1569 modules)
+ GET /profile 200 in 200ms
+ ✓ Compiled /_not-found in 236ms (1307 modules)
+ GET /updates122 404 in 349ms
+ GET /updates122 404 in 138ms
+ GET /updates122 404 in 125ms
+ ✓ Compiled in 1509ms (1552 modules)
+ GET /profile 200 in 1447ms
+ ✓ Compiled /_not-found in 280ms (1290 modules)
+ GET /updates122 404 in 438ms
+ GET /updates122 404 in 239ms
+ ✓ Compiled in 885ms (1555 modules)
+ GET /profile 200 in 198ms
+ GET /updates122 404 in 54ms
+ GET /updates122 404 in 128ms
+ ✓ Compiled in 1164ms (1552 modules)
+ GET /profile 200 in 391ms
+ ✓ Compiled /_not-found in 170ms (1290 modules)
+ GET /updates122 404 in 283ms
+ GET /updates122 404 in 183ms
+ GET /profile 200 in 1707ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 630ms (1307 modules)
+ GET /favicon.ico 200 in 1288ms
+ ✓ Compiled in 1638ms (1552 modules)
+ GET /profile 200 in 1791ms
+ ✓ Compiled /_not-found in 286ms (1290 modules)
+ GET /updates122 404 in 412ms
+ GET /updates122 404 in 221ms
+ GET /services 200 in 387ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 1446ms
+ GET /services 200 in 59ms
+ GET / 200 in 312ms
+ GET / 200 in 1335ms
+ GET /services 200 in 98ms
+ ✓ Compiled in 1290ms (1552 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 113ms
+ ✓ Compiled /_not-found in 209ms (1290 modules)
+ GET /updates122 404 in 313ms
+ GET /updates122 404 in 123ms
+ GET /updates122 404 in 44ms
+ GET /services 200 in 101ms
+ ✓ Compiled in 785ms (1555 modules)
+ GET /services 200 in 150ms
+ GET /updates122 404 in 51ms
+ GET /updates122 404 in 96ms
+ ✓ Compiled in 461ms (1555 modules)
+ GET /updates122 404 in 43ms
+ GET /services 200 in 137ms
+ GET /updates122 404 in 117ms
+ GET /updates122 404 in 34ms
+ ✓ Compiled in 728ms (1555 modules)
+ GET /updates122 404 in 42ms
+ GET /services 200 in 134ms
+ GET /updates122 404 in 153ms
+ ✓ Compiled in 631ms (1555 modules)
+ GET /updates122 404 in 75ms
+ GET /updates122 404 in 460ms
+ GET /services 200 in 700ms
+ ✓ Compiled in 576ms (1555 modules)
+ GET /services 200 in 89ms
+ GET /updates122 404 in 43ms
+ GET /updates122 404 in 115ms
+ GET /updates122 404 in 46ms
+ ✓ Compiled in 1094ms (1552 modules)
+ GET /services 200 in 150ms
+ ✓ Compiled /_not-found in 244ms (1290 modules)
+ GET /updates122 404 in 421ms
+ GET /updates122 404 in 107ms
+ ✓ Compiled in 504ms (1555 modules)
+ GET /updates122 404 in 106ms
+ GET /services 200 in 116ms
+ GET /updates122 404 in 256ms
+ ✓ Compiled in 552ms (1555 modules)
+ GET /updates122 404 in 106ms
+ GET /services 200 in 120ms
+ GET /updates122 404 in 79ms
+ GET /updates122 404 in 58ms
+ ✓ Compiled in 408ms (1555 modules)
+ GET /updates122 404 in 40ms
+ GET /services 200 in 119ms
+ GET /updates122 404 in 151ms
+ ✓ Compiled in 1590ms (1555 modules)
+ GET /updates122 404 in 51ms
+ GET /services 200 in 185ms
+ GET /updates122 404 in 146ms
+ GET /updates122 404 in 46ms
+ ✓ Compiled in 540ms (1555 modules)
+ GET /updates122 404 in 31ms
+ GET /services 200 in 141ms
+ GET /updates122 404 in 122ms
+ GET /updates122 404 in 43ms
+ GET /services 200 in 171ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 562ms (1307 modules)
+ GET /favicon.ico 200 in 913ms
+ ✓ Compiled in 648ms (1569 modules)
+ GET /services 200 in 397ms
+ ✓ Compiled /_not-found in 203ms (1307 modules)
+ GET /updates122 404 in 347ms
+ GET /updates122 404 in 173ms
+ GET /updates122 404 in 86ms
+ ✓ Compiled in 724ms (1555 modules)
+ GET /updates122 404 in 80ms
+ GET /services 200 in 1346ms
+ GET /updates122 404 in 150ms
+ ✓ Compiled in 608ms (1555 modules)
+ GET /updates122 404 in 36ms
+ GET /services 200 in 155ms
+ GET /updates122 404 in 171ms
+ GET /updates122 404 in 49ms
+ GET /services 200 in 149ms
+ ✓ Compiled /favicon.ico in 212ms (1307 modules)
+ GET /favicon.ico 200 in 593ms
+ ✓ Compiled in 1192ms (1552 modules)
+ GET /services 200 in 1281ms
+ ✓ Compiled /_not-found in 230ms (1290 modules)
+ GET /updates122 404 in 338ms
+ GET /updates122 404 in 160ms
+ ✓ Compiled in 525ms (1555 modules)
+ GET /services 200 in 132ms
+ ✓ Compiled in 394ms (1555 modules)
+ GET /services 200 in 92ms
+ GET /updates122 404 in 31ms
+ GET /updates122 404 in 103ms
+ ✓ Compiled in 1275ms (1552 modules)
+ GET /services 200 in 163ms
+ ✓ Compiled /_not-found in 284ms (1290 modules)
+ GET /updates122 404 in 376ms
+ GET /updates122 404 in 84ms
+ GET /updates122 404 in 144ms
+ ✓ Compiled in 1482ms (1556 modules)
+ GET /updates122 404 in 35ms
+ GET /services 200 in 138ms
+ GET /updates122 404 in 190ms
+ ✓ Compiled in 407ms (1556 modules)
+ GET /services 200 in 106ms
+ GET /updates122 404 in 63ms
+ GET /updates122 404 in 84ms
+ GET /updates122 404 in 68ms
+ ✓ Compiled in 511ms (1557 modules)
+ GET /updates122 404 in 31ms
+ GET /services 200 in 133ms
+ GET /updates122 404 in 94ms
+ ✓ Compiled in 1388ms (1557 modules)
+ GET /services 200 in 330ms
+ GET /updates122 404 in 98ms
+ GET /updates122 404 in 96ms
+ ✓ Compiled in 549ms (1557 modules)
+ GET /updates122 404 in 27ms
+ GET /services 200 in 133ms
+ GET /updates122 404 in 189ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 1051ms
+ GET /profile 200 in 318ms
+ GET /contact 200 in 158ms
+ GET /profile 200 in 266ms
+ ✓ Compiled in 2.5s (1554 modules)
+ GET /profile 200 in 145ms
+ ✓ Compiled /_not-found in 188ms (1292 modules)
+ GET /updates122 404 in 271ms
+ GET /updates122 404 in 181ms
+ ✓ Compiled in 678ms (1557 modules)
+ GET /updates122 404 in 188ms
+ GET /profile 200 in 193ms
+ GET /updates122 404 in 185ms
+ GET /profile 200 in 323ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1016ms (1309 modules)
+ GET /favicon.ico 200 in 1389ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 349ms
+ ✓ Compiled in 2.1s (1554 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 360ms (1292 modules)
+ GET / 200 in 2330ms
+ GET /updates122 404 in 546ms
+ GET /updates122 404 in 162ms
+ ✓ Compiled in 1012ms (1557 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 84ms
+ GET / 200 in 416ms
+ GET /updates122 404 in 109ms
+ ✓ Compiled in 739ms (1557 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 42ms
+ GET / 200 in 259ms
+ GET /updates122 404 in 103ms
+ GET /updates122 404 in 81ms
+ ✓ Compiled in 1012ms (1557 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 30ms
+ GET / 200 in 334ms
+ GET /updates122 404 in 153ms
+ GET /updates122 404 in 65ms
+ ✓ Compiled in 1925ms (1554 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 132ms
+ ✓ Compiled /_not-found in 238ms (1292 modules)
+ GET /updates122 404 in 318ms
+ GET /updates122 404 in 114ms
+ GET /updates122 404 in 48ms
+ ✓ Compiled in 844ms (1557 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 58ms
+ GET / 200 in 181ms
+ GET /updates122 404 in 201ms
+ GET /updates122 404 in 89ms
+ ✓ Compiled in 695ms (1557 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 88ms
+ GET / 200 in 350ms
+ GET /updates122 404 in 155ms
+ GET /updates122 404 in 99ms
+ GET / 200 in 823ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 544ms (1309 modules)
+ GET /favicon.ico 200 in 1137ms
+ ✓ Compiled in 2.3s (1554 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ✓ Compiled /_not-found in 424ms (1292 modules)
+ GET / 200 in 1852ms
+ GET /updates122 404 in 682ms
+ GET /updates122 404 in 515ms
+ ✓ Compiled in 775ms (1557 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 49ms
+ GET / 200 in 209ms
+ GET /updates122 404 in 205ms
+ ✓ Compiled in 1622ms (1556 modules)
+ ⨯ ReferenceError: FileText is not defined
+    at Home (src/app/page.tsx:393:19)
+  391 |               <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+  392 |                 <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{backgroundColor: '#E0F2F1'}}>
+> 393 |                   <FileText className="w-8 h-8" style={{color: '#5BBCB6'}} />
+      |                   ^
+  394 |                 </div>
+  395 |                 <h3 className="text-xl font-bold mb-4" style={{color: '#2D5A5A'}}>コンテンツ制作の効率化</h3>
+  396 |                 <p className="mb-6" style={{color: '#2D5A5A', opacity: 0.8}}> {
+  digest: '2877791122'
+}
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 166ms
+ GET /updates122 404 in 53ms
+ GET /updates122 404 in 283ms
+ ✓ Compiled in 1189ms (1555 modules)
+ GET /updates122 404 in 115ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /updates122 404 in 42ms
+ ⨯ ReferenceError: FileText is not defined
+    at Home (src/app/page.tsx:393:19)
+  391 |               <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+  392 |                 <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{backgroundColor: '#E0F2F1'}}>
+> 393 |                   <FileText className="w-8 h-8" style={{color: '#5BBCB6'}} />
+      |                   ^
+  394 |                 </div>
+  395 |                 <h3 className="text-xl font-bold mb-4" style={{color: '#2D5A5A'}}>コンテンツ制作の効率化</h3>
+  396 |                 <p className="mb-6" style={{color: '#2D5A5A', opacity: 0.8}}> {
+  digest: '610671711'
+}
+ GET / 500 in 561ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1338ms (1307 modules)
+ GET /favicon.ico 200 in 1739ms
+ GET /favicon.ico 200 in 7ms
+ ✓ Compiled in 815ms (1571 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /updates122 404 in 85ms
+ GET /updates122 404 in 64ms
+ GET /updates122 404 in 57ms
+ ⨯ ReferenceError: FileText is not defined
+    at Home (src/app/page.tsx:393:19)
+  391 |               <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+  392 |                 <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{backgroundColor: '#E0F2F1'}}>
+> 393 |                   <FileText className="w-8 h-8" style={{color: '#5BBCB6'}} />
+      |                   ^
+  394 |                 </div>
+  395 |                 <h3 className="text-xl font-bold mb-4" style={{color: '#2D5A5A'}}>コンテンツ制作の効率化</h3>
+  396 |                 <p className="mb-6" style={{color: '#2D5A5A', opacity: 0.8}}> {
+  digest: '3962819358'
+}
+ GET / 500 in 2055ms
+ GET /favicon.ico 200 in 58ms
+ ⨯ ReferenceError: FileText is not defined
+    at Home (src/app/page.tsx:393:19)
+  391 |               <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+  392 |                 <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{backgroundColor: '#E0F2F1'}}>
+> 393 |                   <FileText className="w-8 h-8" style={{color: '#5BBCB6'}} />
+      |                   ^
+  394 |                 </div>
+  395 |                 <h3 className="text-xl font-bold mb-4" style={{color: '#2D5A5A'}}>コンテンツ制作の効率化</h3>
+  396 |                 <p className="mb-6" style={{color: '#2D5A5A', opacity: 0.8}}> {
+  digest: '3962819358'
+}
+ GET / 500 in 364ms
+ GET /favicon.ico 200 in 11ms
+ ✓ Compiled in 1540ms (1571 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /updates122 404 in 27ms
+ GET /updates122 404 in 94ms
+ GET / 200 in 2136ms
+ GET /favicon.ico 200 in 70ms
+ ✓ Compiled in 1784ms (1551 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 1732ms
+ ✓ Compiled /_not-found in 409ms (1289 modules)
+ GET /updates122 404 in 611ms
+ GET /updates122 404 in 333ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 356ms
+ ✓ Compiled /favicon.ico in 283ms (1306 modules)
+ GET /favicon.ico 200 in 744ms
+ ✓ Compiled in 1864ms (1571 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 183ms
+ GET /updates122 404 in 47ms
+ GET /updates122 404 in 203ms
+ GET /updates122 404 in 66ms
+ ✓ Compiled in 1967ms (1554 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 81ms
+ GET / 200 in 1569ms
+ GET /updates122 404 in 224ms
+ GET /updates122 404 in 74ms
+ GET /services 200 in 145ms
+ GET /profile 200 in 292ms
+ GET /contact 200 in 60ms
+ GET /updates 200 in 1490ms
+ GET / 200 in 288ms
+ ✓ Compiled in 2.4s (1551 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 172ms
+ ✓ Compiled /_not-found in 392ms (1289 modules)
+ GET /updates122 404 in 516ms
+ GET /updates122 404 in 141ms
+ GET /updates122 404 in 80ms
+ ✓ Compiled in 1974ms (1551 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 264ms
+ ✓ Compiled /_not-found in 366ms (1289 modules)
+ GET /updates122 404 in 519ms
+ GET /updates122 404 in 194ms
+ GET /updates122 404 in 136ms
+ ✓ Compiled in 1362ms (1551 modules)
+ ✓ Compiled /_not-found in 256ms (1289 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 571ms
+ GET / 200 in 1001ms
+ GET /updates122 404 in 119ms
+ ✓ Compiled in 1447ms (1555 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /updates122 404 in 57ms
+ GET / 200 in 189ms
+ GET /updates122 404 in 130ms
+ ✓ Compiled in 2.1s (1552 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 114ms
+ ✓ Compiled /_not-found in 347ms (1290 modules)
+ GET /updates122 404 in 474ms
+ GET /updates122 404 in 143ms
+ GET /updates122 404 in 49ms
+ ✓ Compiled in 1515ms (1552 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 221ms
+ ✓ Compiled /_not-found in 233ms (1290 modules)
+ GET /updates122 404 in 311ms
+ GET /updates122 404 in 338ms
+ ✓ Compiled in 907ms (1555 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 192ms
+ GET /updates122 404 in 40ms
+ GET /updates122 404 in 225ms
+ GET /services 200 in 119ms
+ GET /services 200 in 76ms
+ ✓ Compiled in 1645ms (1552 modules)
+ GET /services 200 in 115ms
+ ✓ Compiled /_not-found in 196ms (1290 modules)
+ GET /updates122 404 in 351ms
+ GET /updates122 404 in 102ms
+ ✓ Compiled in 567ms (1555 modules)
+ GET /updates122 404 in 26ms
+ GET /services 200 in 140ms
+ GET /updates122 404 in 217ms
+ ✓ Compiled in 381ms (1555 modules)
+ GET /updates122 404 in 31ms
+ GET /services 200 in 159ms
+ GET /updates122 404 in 125ms
+ GET /services 200 in 72ms
+ ✓ Compiled in 2.5s (1552 modules)
+ GET /services 200 in 158ms
+ ✓ Compiled /_not-found in 250ms (1290 modules)
+ GET /updates122 404 in 578ms
+ GET /services 200 in 314ms
+ GET /updates122 404 in 70ms
+ GET /updates122 404 in 167ms
+ ✓ Compiled in 604ms (1555 modules)
+ GET /updates122 404 in 29ms
+ GET /services 200 in 137ms
+ GET /updates122 404 in 179ms
+ GET /updates122 404 in 135ms
+ ○ Compiling /terms ...
+ ✓ Compiled /terms in 901ms (1292 modules)
+ GET /terms 200 in 1126ms
+ GET /updates122 404 in 111ms
+ GET /terms 200 in 91ms
+ GET /updates122 404 in 72ms
+ GET /updates 200 in 597ms
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 373ms
+ ✓ Compiled in 1064ms (265 modules)
+ GET / 200 in 74ms
+ GET /updates122 404 in 46ms
+ GET /updates122 404 in 72ms
+ GET /updates122 404 in 50ms
+ GET /updates 200 in 350ms
+ ✓ Compiled in 135ms (265 modules)
+ GET /updates 200 in 75ms
+ GET /updates122 404 in 28ms
+ GET /updates122 404 in 65ms
+ ✓ Compiled in 261ms (265 modules)
+ GET /updates 200 in 75ms
+ GET /updates122 404 in 62ms
+ GET /updates122 404 in 63ms
+ GET /updates122 404 in 54ms
+ GET / 200 in 279ms
+ GET / 200 in 237ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1349ms (1299 modules)
+ GET /favicon.ico 200 in 1944ms
+ ✓ Compiled in 328ms (265 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:8080". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 253ms
+ GET /updates122 404 in 43ms
+ GET /updates122 404 in 194ms
+ GET /updates122 404 in 46ms
+ GET /updates 200 in 360ms
+ ✓ Compiled in 798ms (265 modules)
+ GET /updates 200 in 66ms
+ GET /updates122 404 in 26ms
+ GET /updates122 404 in 63ms
+ GET /updates122 404 in 52ms
+ GET /services 200 in 170ms
+ GET /updates 200 in 349ms

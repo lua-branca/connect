@@ -103,7 +103,7 @@ const Footer = () => {
             {/* ナビゲーションリンク */}
             {footerLinks.map((section) => (
               <div key={section.title}>
-                <h3 className="text-sm font-semibold uppercase tracking-wider mb-4" style={{color: '#F6E96B'}}>
+                <h3 className="text-sm font-semibold uppercase tracking-wider mb-4" style={{color: '#A8D5D0'}}>
                   {section.title}
                 </h3>
                 <ul className="space-y-3">
@@ -111,10 +111,11 @@ const Footer = () => {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="transition-colors text-sm hover:underline"
+                        className="relative text-sm transition-all duration-300 hover:translate-x-1 group"
                         style={{color: '#A8D5D0'}}
                       >
-                        {link.name}
+                        <span className="relative z-10">{link.name}</span>
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{backgroundColor: '#F6E96B'}}></span>
                       </Link>
                     </li>
                   ))}
@@ -134,24 +135,27 @@ const Footer = () => {
               <div className="flex space-x-6 text-sm">
                 <Link
                   href="/privacy"
-                  className="transition-colors hover:underline"
+                  className="relative transition-all duration-300 hover:translate-x-1 group"
                   style={{color: '#A8D5D0'}}
                 >
-                  プライバシーポリシー
+                  <span className="relative z-10">プライバシーポリシー</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{backgroundColor: '#F6E96B'}}></span>
                 </Link>
                 <Link
                   href="/terms"
-                  className="transition-colors hover:underline"
+                  className="relative transition-all duration-300 hover:translate-x-1 group"
                   style={{color: '#A8D5D0'}}
                 >
-                  利用規約
+                  <span className="relative z-10">利用規約</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{backgroundColor: '#F6E96B'}}></span>
                 </Link>
                 <Link
                   href="/sitemap"
-                  className="transition-colors hover:underline"
+                  className="relative transition-all duration-300 hover:translate-x-1 group"
                   style={{color: '#A8D5D0'}}
                 >
-                  サイトマップ
+                  <span className="relative z-10">サイトマップ</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{backgroundColor: '#F6E96B'}}></span>
                 </Link>
               </div>
             </div>

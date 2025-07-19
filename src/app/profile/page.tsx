@@ -41,7 +41,7 @@ export default async function ProfilePage() {
             福田 美佐子
           </h1>
           <p className="text-xl mb-6" style={{color: '#5BBCB6'}}>
-            AI活用アドバイザー
+            コンテンツ・AI活用コンサルタント
           </p>
           
           {/* ソーシャルアイコン */}
@@ -93,73 +93,10 @@ export default async function ProfilePage() {
         <div className="rounded-2xl p-12 mb-16" style={{background: 'linear-gradient(135deg, #A8D5D0 0%, #5BBCB6 100%)'}}>
           <h2 className="text-4xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>私が目指すこと</h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg leading-relaxed mb-6" style={{color: '#2D5A5A'}}>
+            <p className="text-lg leading-relaxed text-center" style={{color: '#2D5A5A'}}>
               私は、これまでの経験で培った「課題解決能力」と「情報発信力」を基盤に、新たな価値創造に挑戦したいと考えています。
               特に、急速に進化するAI技術を社会に実装し、より多くの企業や個人がその恩恵を受けられるよう支援することを使命としています。
             </p>
-            <p className="text-center font-medium" style={{color: '#2D5A5A', opacity: 0.8}}>
-              以下の3つの領域で皆様のビジネスと社会に貢献してまいります。
-            </p>
-          </div>
-        </div>
-
-        {/* 3つの事業領域 */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#2D5A5A'}}>取り組んでいること</h2>
-          <div className="grid lg:grid-cols-3 gap-8">
-          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E0F2F1 0%, #F0FFFE 100%)'}}>
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#5BBCB6'}}>
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>AI活用コンサルティング</h3>
-            </div>
-            <p className="mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
-              企業がAI技術を効果的に導入し、ビジネス課題を解決するための戦略立案から実行までをサポートします。
-            </p>
-            <ul className="text-sm space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
-              <li>• AI活用業務効率化</li>
-              <li>• 新規事業開発支援</li>
-              <li>• データ基盤意思決定</li>
-              <li>• 企業競争力向上</li>
-            </ul>
-          </div>
-
-          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #FFF4E6 0%, #FFFEF0 100%)'}}>
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#F6E96B'}}>
-                <Target className="w-6 h-6" style={{color: '#2D5A5A'}} />
-              </div>
-              <h3 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>AIマーケティング戦略</h3>
-            </div>
-            <p className="mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
-              AIツールを駆使し、データに基づいた精度の高いマーケティング戦略と、効率的かつ高品質なコンテンツ生成を提案します。
-            </p>
-            <ul className="text-sm space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
-              <li>• パーソナライズ顧客体験</li>
-              <li>• マーケティングROI最大化</li>
-              <li>• AI活用コンテンツ生成</li>
-              <li>• データドリブン戦略</li>
-            </ul>
-          </div>
-
-          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E8F5E8 0%, #F0FFFE 100%)'}}>
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#A8D5D0'}}>
-                <User className="w-6 h-6" style={{color: '#2D5A5A'}} />
-              </div>
-              <h3 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>地方・食の生産者支援</h3>
-            </div>
-            <p className="mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
-              地方の生産者と消費者を直接結びつけるオンラインプラットフォームを構築し、生産者の収益向上と地域経済の活性化に貢献します。
-            </p>
-            <ul className="text-sm space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
-              <li>• 生産者ストーリー発信</li>
-              <li>• 安心安全な食材選択</li>
-              <li>• 地域経済活性化</li>
-              <li>• 生産者×消費者の絆</li>
-            </ul>
-          </div>
           </div>
         </div>
 
@@ -168,7 +105,7 @@ export default async function ProfilePage() {
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4" style={{color: '#2D5A5A'}}>私の強み</h2>
             <p className="text-lg" style={{color: '#2D5A5A', opacity: 0.8}}>
-              これらの取り組みを通じて、私が発揮できる強みをご紹介します。
+              この使命を実現するために、私が発揮できる強みをご紹介します。
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -193,56 +130,127 @@ export default async function ProfilePage() {
           </div>
         </div>
 
-        {/* スキル・専門分野 */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-          <h2 className="text-4xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>スキル・専門分野</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {profile?.skills && profile.skills.length > 0 ? (
-              profile.skills.map((skill, index) => (
-                <div key={index}>
-                  <h3 className="text-xl font-semibold mb-4" style={{color: '#2D5A5A'}}>{skill.category}</h3>
-                  <ul className="space-y-2" style={{color: '#2D5A5A', opacity: 0.8}}>
-                    {skill.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>• {item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))
-            ) : (
-              // デフォルトのスキル表示
-              <>
-                <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{color: '#2D5A5A'}}>プロジェクトマネジメント</h3>
-                  <ul className="space-y-2" style={{color: '#2D5A5A', opacity: 0.8}}>
-                    <li>• 10名規模チーム管理</li>
-                    <li>• コスト・品質・進捗管理</li>
-                    <li>• 複雑要件の整理・計画策定</li>
-                    <li>• ステークホルダー関係構築</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{color: '#2D5A5A'}}>コンテンツ・CMS運用</h3>
-                  <ul className="space-y-2" style={{color: '#2D5A5A', opacity: 0.8}}>
-                    <li>• CMS構築・運用</li>
-                    <li>• ウェブメディア企画・編集</li>
-                    <li>• 読者の心に響くライティング</li>
-                    <li>• 情報発信によるビジネス貢献</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{color: '#2D5A5A'}}>AI技術活用</h3>
-                  <ul className="space-y-2" style={{color: '#2D5A5A', opacity: 0.8}}>
-                    <li>• ChatGPT/Claude API活用</li>
-                    <li>• AI業務効率化戦略</li>
-                    <li>• データドリブン意思決定</li>
-                    <li>• AIマーケティング支援</li>
-                  </ul>
-                </div>
-              </>
-            )}
+        {/* 私の歩み・経験 */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#2D5A5A'}}>私の歩み・経験</h2>
+          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E0F2F1 0%, #F0FFFE 100%)'}}>
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#5BBCB6'}}>
+                <Briefcase className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>プロジェクトマネジメント</h3>
+            </div>
+            <p className="mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
+              IT業界で15年以上にわたり、10名規模のチーム管理から複雑なプロジェクトの計画策定・実行まで幅広く経験してきました。
+            </p>
+            <ul className="text-sm space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
+              <li>• 大規模システム開発プロジェクト管理</li>
+              <li>• コスト・品質・進捗の統合管理</li>
+              <li>• ステークホルダー調整・合意形成</li>
+              <li>• チーム育成・知識移転</li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #FFF4E6 0%, #FFFEF0 100%)'}}>
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#F6E96B'}}>
+                <BookOpen className="w-6 h-6" style={{color: '#2D5A5A'}} />
+              </div>
+              <h3 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>コンテンツ・メディア運営</h3>
+            </div>
+            <p className="mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
+              CMS構築・運用からウェブメディアの企画・編集まで、デジタルコンテンツ制作の全工程を経験し、情報発信力を磨いてきました。
+            </p>
+            <ul className="text-sm space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
+              <li>• CMS設計・構築・運用</li>
+              <li>• ウェブメディア企画・編集</li>
+              <li>• ユーザー目線のライティング</li>
+              <li>• ブランド価値向上への貢献</li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E8F5E8 0%, #F0FFFE 100%)'}}>
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#A8D5D0'}}>
+                <Brain className="w-6 h-6" style={{color: '#2D5A5A'}} />
+              </div>
+              <h3 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>AI技術への探求</h3>
+            </div>
+            <p className="mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
+              ChatGPTやClaude等の生成AIが登場した当初から積極的に活用し、ビジネス現場での実践的な応用方法を研究・実装してきました。
+            </p>
+            <ul className="text-sm space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
+              <li>• 生成AI活用による業務効率化</li>
+              <li>• AI API統合・自動化システム構築</li>
+              <li>• データ分析・意思決定支援</li>
+              <li>• AI時代の働き方改革推進</li>
+            </ul>
+          </div>
           </div>
         </div>
 
+        {/* 主な実績 */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
+          <h2 className="text-4xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>主な実績</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="border-l-4 pl-6" style={{borderColor: '#5BBCB6'}}>
+                <h3 className="text-xl font-bold mb-2" style={{color: '#2D5A5A'}}>教育系スタートアップ支援</h3>
+                <p className="text-sm mb-2" style={{color: '#5BBCB6', fontWeight: 'medium'}}>コンテンツ企画・編集</p>
+                <p className="text-sm mb-3" style={{color: '#2D5A5A', opacity: 0.8}}>
+                  教育向けWebサービスの導入事例制作を4年間担当。教育現場への取材を通じてコンテンツマーケティングを推進。
+                </p>
+                <ul className="text-xs space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
+                  <li>• 教育委員会・学校法人への取材実施</li>
+                  <li>• コンテンツ企画から記事編集まで一貫対応</li>
+                  <li>• 導入効果を可視化したストーリー制作</li>
+                </ul>
+              </div>
+              
+              <div className="border-l-4 pl-6" style={{borderColor: '#F6E96B'}}>
+                <h3 className="text-xl font-bold mb-2" style={{color: '#2D5A5A'}}>カスタマーサクセス・PM業務</h3>
+                <p className="text-sm mb-2" style={{color: '#F6E96B', fontWeight: 'medium'}}>プロジェクトマネージャー</p>
+                <p className="text-sm mb-3" style={{color: '#2D5A5A', opacity: 0.8}}>
+                  BtoBサービスの複数クライアントプロジェクトを担当。2〜10名のチームメンバー管理により継続的な成果創出を実現。
+                </p>
+                <ul className="text-xs space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
+                  <li>• 混乱プロジェクトのタスク整理・実行プラン策定</li>
+                  <li>• クライアント関係構築・チーム環境づくり</li>
+                  <li>• 継続的な品質向上・業務効率化推進</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="border-l-4 pl-6" style={{borderColor: '#A8D5D0'}}>
+                <h3 className="text-xl font-bold mb-2" style={{color: '#2D5A5A'}}>大手企業CMS構築・運用</h3>
+                <p className="text-sm mb-2" style={{color: '#A8D5D0', fontWeight: 'medium'}}>Webディレクター</p>
+                <p className="text-sm mb-3" style={{color: '#2D5A5A', opacity: 0.8}}>
+                  大手企業のコーポレートサイト・オウンドメディアのCMS構築・運用を多数担当。金融・保険・教育・IT業界での豊富な実績。
+                </p>
+                <ul className="text-xs space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
+                  <li>• Movable Type、Sitecore、AEM等の運用手順確立</li>
+                  <li>• IRサイト決算対応・安定運用体制構築</li>
+                  <li>• GitHub活用によるコンテンツ管理効率化</li>
+                </ul>
+              </div>
+              
+              <div className="border-l-4 pl-6" style={{borderColor: '#5BBCB6'}}>
+                <h3 className="text-xl font-bold mb-2" style={{color: '#2D5A5A'}}>AI活用コンテンツ制作</h3>
+                <p className="text-sm mb-2" style={{color: '#5BBCB6', fontWeight: 'medium'}}>SEOライター</p>
+                <p className="text-sm mb-3" style={{color: '#2D5A5A', opacity: 0.8}}>
+                  地域情報サイトでのSEO記事制作において、AIライティングツールを活用した効率的な制作体制を構築。
+                </p>
+                <ul className="text-xs space-y-1" style={{color: '#2D5A5A', opacity: 0.7}}>
+                  <li>• AIツール活用による記事制作効率化</li>
+                  <li>• SEO最適化された高品質コンテンツ制作</li>
+                  <li>• 地域情報発信を通じた観光促進貢献</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* 職歴・経験 */}
         {profile?.experience && profile.experience.length > 0 && (
@@ -314,7 +322,7 @@ export default async function ProfilePage() {
 
         {/* お問い合わせCTA */}
         <div className="text-center rounded-2xl p-12" style={{background: 'linear-gradient(135deg, #A8D5D0 0%, #5BBCB6 100%)'}}>
-          <h2 className="text-4xl font-bold mb-6" style={{color: '#2D5A5A'}}>共に新しい価値を創造しませんか</h2>
+          <h2 className="text-4xl font-bold mb-6" style={{color: '#2D5A5A'}}>まずはお気軽にお話を聞かせてください</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto" style={{color: '#2D5A5A'}}>
             皆様のビジネスの成長、そしてより豊かな社会の実現に向けて、
             私の経験と情熱を最大限に活かして貢献できることを楽しみにしております。

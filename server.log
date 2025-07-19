@@ -1,0 +1,12 @@
+
+> lua-branca@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.4.1
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.11.5:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3.8s
+[?25h

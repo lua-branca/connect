@@ -1,4 +1,4 @@
-import { Brain, Target, User, CheckCircle, ArrowRight, Mail, Calendar, Settings, FileText } from 'lucide-react'
+import { Brain, Target, User, CheckCircle, ArrowRight, Mail, Calendar, Settings, FileText, Lightbulb, Award, Heart } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ServicesPage() {
@@ -36,13 +36,13 @@ export default function ServicesPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-6xl mx-auto">
 
-        {/* 私たちの強み */}
+        {/* 強み・特徴 */}
         <div className="rounded-2xl p-8 mb-16" style={{background: 'linear-gradient(135deg, #F8FBFA 0%, #E8F5E8 100%)'}}>
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>私たちの強み</h2>
+          <div className="mb-2"></div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#E0F2F1'}}>
-                <Brain className="w-8 h-8" style={{color: '#5BBCB6'}} />
+                <Lightbulb className="w-8 h-8" style={{color: '#5BBCB6'}} />
               </div>
               <h3 className="text-xl font-semibold mb-3" style={{color: '#2D5A5A'}}>技術×ビジネス×共感力</h3>
               <p style={{color: '#2D5A5A', opacity: 0.8}}>
@@ -52,17 +52,17 @@ export default function ServicesPage() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#FFF4E6'}}>
-                <Target className="w-8 h-8" style={{color: '#F6E96B'}} />
+                <Award className="w-8 h-8" style={{color: '#F6E96B'}} />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{color: '#2D5A5A'}}>実績に基づく提案</h3>
+              <h3 className="text-xl font-semibold mb-3" style={{color: '#2D5A5A'}}>実践的なアプローチ</h3>
               <p style={{color: '#2D5A5A', opacity: 0.8}}>
-                10名規模のチーム管理経験とCMS運用実績を基に、
-                実現可能性の高い具体的なソリューションを提案
+                コンテンツ制作・メディア運営・プロジェクトマネジメントの豊富な実務経験を基に、
+                現場で確実に成果を出せる実践的なソリューションを提案
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#E8F5E8'}}>
-                <User className="w-8 h-8" style={{color: '#A8D5D0'}} />
+                <Heart className="w-8 h-8" style={{color: '#A8D5D0'}} />
               </div>
               <h3 className="text-xl font-semibold mb-3" style={{color: '#2D5A5A'}}>継続的なサポート</h3>
               <p style={{color: '#2D5A5A', opacity: 0.8}}>
@@ -71,23 +71,15 @@ export default function ServicesPage() {
               </p>
             </div>
           </div>
-          
-          {/* 提供者について */}
-          <div className="text-center mt-8 p-6 bg-white/60 backdrop-blur-sm rounded-xl">
-            <p className="text-lg leading-relaxed" style={{color: '#2D5A5A'}}>
-              <span className="font-semibold">豊富な実務経験</span>を基に、
-              現場で確実に成果を出せるソリューションをご提案します。
-            </p>
-          </div>
         </div>
 
         {/* 3つのメインサービス */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* AI活用コンサルティング */}
-          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E0F2F1 0%, #F0FFFE 100%)'}}>
+          <div id="ai-consulting" className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E0F2F1 0%, #F0FFFE 100%)'}}>
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#5BBCB6'}}>
-                <Brain className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 flex-shrink-0" style={{backgroundColor: '#5BBCB6'}}>
+                <Brain className="w-7 h-7 text-white" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>AI活用コンサルティング</h2>
@@ -95,12 +87,12 @@ export default function ServicesPage() {
               </div>
             </div>
             
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed" style={{color: '#2D5A5A', opacity: 0.8}}>
               企業がAI技術を効果的に導入し、ビジネス課題を解決するための戦略立案から実行までをサポートします。
               特に、AIを活用した業務効率化、新規事業開発、そしてデータに基づいた意思決定を支援することで、企業の競争力向上に貢献します。
             </p>
 
-            <h3 className="font-semibold text-gray-800 mb-4">提供内容</h3>
+            <h3 className="font-semibold mb-4" style={{color: '#2D5A5A'}}>提供内容</h3>
             <ul className="space-y-3 mb-8">
               {[
                 'AI導入戦略の策定',
@@ -122,14 +114,14 @@ export default function ServicesPage() {
           </div>
 
           {/* AIマーケティング戦略 */}
-          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #FFF4E6 0%, #FFFEF0 100%)'}}>
+          <div id="ai-marketing" className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #FFF4E6 0%, #FFFEF0 100%)'}}>
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#F6E96B'}}>
-                <Target className="w-6 h-6" style={{color: '#2D5A5A'}} />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 flex-shrink-0" style={{backgroundColor: '#F6E96B'}}>
+                <Target className="w-7 h-7" style={{color: '#2D5A5A'}} />
               </div>
               <div>
                 <h2 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>AIマーケティング戦略</h2>
-                <p className="font-medium" style={{color: '#F6E96B'}}>データドリブン × 高品質コンテンツ</p>
+                <p className="font-medium" style={{color: '#2D5A5A', opacity: 0.7}}>データドリブン × 高品質コンテンツ</p>
               </div>
             </div>
             
@@ -159,10 +151,10 @@ export default function ServicesPage() {
           </div>
 
           {/* 地方・食の生産者支援 */}
-          <div className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E8F5E8 0%, #F0FFFE 100%)'}}>
+          <div id="producer-support" className="rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" style={{background: 'linear-gradient(135deg, #E8F5E8 0%, #F0FFFE 100%)'}}>
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{backgroundColor: '#A8D5D0'}}>
-                <User className="w-6 h-6" style={{color: '#2D5A5A'}} />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 flex-shrink-0" style={{backgroundColor: '#A8D5D0'}}>
+                <User className="w-7 h-7" style={{color: '#2D5A5A'}} />
               </div>
               <div>
                 <h2 className="text-2xl font-bold" style={{color: '#2D5A5A'}}>AI活用地方生産者支援</h2>
@@ -170,12 +162,12 @@ export default function ServicesPage() {
               </div>
             </div>
             
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed" style={{color: '#2D5A5A', opacity: 0.8}}>
               AI・デジタル技術を活用して地方の生産者の課題を解決し、消費者との深いつながりを創出します。
               データドリブンなマーケティングと温かみのあるストーリーテリングを組み合わせ、持続可能なビジネス成長を支援します。
             </p>
 
-            <h3 className="font-semibold text-gray-800 mb-4">提供内容</h3>
+            <h3 className="font-semibold mb-4" style={{color: '#2D5A5A'}}>提供内容</h3>
             <ul className="space-y-3 mb-8">
               {[
                 'AIマーケティング × オンライン販売システム',
@@ -200,7 +192,7 @@ export default function ServicesPage() {
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold mb-4" style={{color: '#2D5A5A'}}>AI導入成功のための基盤サービス</h2>
             <p className="text-lg max-w-3xl mx-auto" style={{color: '#2D5A5A', opacity: 0.8}}>
-              15年の実績を活かし、AI導入プロジェクトを確実に成功に導くための追加サポート
+              15年以上の実績を活かし、AI導入プロジェクトを確実に成功に導くための追加サポート
             </p>
           </div>
           
@@ -218,7 +210,7 @@ export default function ServicesPage() {
               </div>
               
               <p className="mb-4 text-sm leading-relaxed" style={{color: '#2D5A5A', opacity: 0.8}}>
-                10名規模のチーム管理経験を活かし、AI導入プロジェクトの計画策定から実行、効果測定まで一貫してサポートします。
+                IT業界15年以上で培った豊富なプロジェクト管理経験を活かし、AI導入プロジェクトの計画策定から実行、効果測定まで一貫してサポートします。
               </p>
 
               <ul className="space-y-2 mb-4">
@@ -245,12 +237,12 @@ export default function ServicesPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold" style={{color: '#2D5A5A'}}>AI時代のコンテンツ戦略</h3>
-                  <p className="text-sm" style={{color: '#F6E96B'}}>効率的な制作体制構築</p>
+                  <p className="text-sm" style={{color: '#2D5A5A', opacity: 0.7}}>効率的な制作体制構築</p>
                 </div>
               </div>
               
               <p className="mb-4 text-sm leading-relaxed" style={{color: '#2D5A5A', opacity: 0.8}}>
-                CMS運用とメディア編集の経験を基に、AIツールを活用した効率的なコンテンツ制作体制を構築します。
+                豊富なCMS運用・ウェブメディア編集の実務経験を基に、AIツールを活用した効率的なコンテンツ制作体制を構築します。
               </p>
 
               <ul className="space-y-2 mb-4">
