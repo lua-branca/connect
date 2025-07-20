@@ -1,4 +1,4 @@
-import { User, Mail, BookOpen, Facebook, Briefcase, Award, Target, Code, Brain, Users, Instagram, X } from 'lucide-react'
+import { User, Mail, BookOpen, Facebook, Briefcase, Award, Target, Code, Brain, Users, Instagram, X, Globe } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
