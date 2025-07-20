@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 import { ja } from 'date-fns/locale'
 import { Calendar, User, Tag, ArrowLeft, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { PortableText } from '@portabletext/react'
+import { PortableText, type PortableTextBlock } from '@portabletext/react'
 import { Metadata } from 'next'
 import AIExperienceArticle from '@/components/AIExperienceArticle'
 
@@ -167,7 +167,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <AIExperienceArticle />
           ) : post.body && Array.isArray(post.body) && post.body.length > 0 ? (
             <PortableText
-              value={post.body as any}
+              value={post.body as PortableTextBlock[]}
               components={{
                 block: {
                   normal: ({ children }) => <p className="mb-4 leading-relaxed" style={{color: '#2D5A5A', opacity: 0.9}}>{children}</p>,
