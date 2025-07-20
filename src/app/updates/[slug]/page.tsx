@@ -10,9 +10,9 @@ import { Metadata } from 'next'
 import AIExperienceArticle from '@/components/AIExperienceArticle'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // メタデータ生成関数
