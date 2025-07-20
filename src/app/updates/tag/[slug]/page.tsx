@@ -7,9 +7,9 @@ import { ja } from 'date-fns/locale'
 import { Calendar, User, Tag, ArrowLeft } from 'lucide-react'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // タグ名のマップ（実際のプロジェクトではSanityから取得）
@@ -28,8 +28,9 @@ const tagNames: { [key: string]: string } = {
 }
 
 export default async function TagPage({ params }: PageProps) {
-  const posts: BlogPost[] = await getPostsByTag(params.slug)
-  const tagName = tagNames[params.slug] || params.slug
+  const { slug } = await params
+  const posts: BlogPost[] = await getPostsByTag(slug)
+  const tagName = tagNames[slug] || slug
 
   if (!posts || posts.length === 0) {
     notFound()

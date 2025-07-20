@@ -7,9 +7,9 @@ import { ja } from 'date-fns/locale'
 import { Calendar, User, Tag, ArrowLeft, Folder } from 'lucide-react'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // カテゴリ名のマップ（実際のプロジェクトではSanityから取得）
@@ -23,8 +23,9 @@ const categoryNames: { [key: string]: string } = {
 }
 
 export default async function CategoryPage({ params }: PageProps) {
-  const posts: BlogPost[] = await getPostsByCategory(params.slug)
-  const categoryName = categoryNames[params.slug] || params.slug
+  const { slug } = await params
+  const posts: BlogPost[] = await getPostsByCategory(slug)
+  const categoryName = categoryNames[slug] || slug
 
   if (!posts || posts.length === 0) {
     notFound()
