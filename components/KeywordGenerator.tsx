@@ -39,7 +39,7 @@ export function KeywordGenerator({ onChange }: KeywordGeneratorProps) {
       '体験記': ['体験', '実践', 'レビュー', '感想', 'ケーススタディ', '事例']
     }
 
-    const foundKeywords = []
+    const foundKeywords: string[] = []
     Object.entries(keywordCategories).forEach(([category, terms]) => {
       if (terms.some(term => allText.includes(term))) {
         foundKeywords.push(category)
