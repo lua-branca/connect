@@ -10,7 +10,7 @@ export default async function BlogPage() {
   const archiveData = await getArchiveData()
 
   // 年別アーカイブデータを処理
-  const yearCounts = archiveData.yearArchives.reduce((acc: any, post: any) => {
+  const yearCounts = archiveData.yearArchives.reduce((acc: Record<string, number>, post: { year?: number }) => {
     if (post.year) {
       const year = post.year
       acc[year] = (acc[year] || 0) + 1
@@ -19,7 +19,7 @@ export default async function BlogPage() {
   }, {})
 
   // 月別アーカイブデータを処理
-  const monthCounts = archiveData.yearArchives.reduce((acc: any, post: any) => {
+  const monthCounts = archiveData.yearArchives.reduce((acc: Record<string, number>, post: { year?: number; month?: number }) => {
     if (post.year && post.month) {
       const yearMonth = `${post.year}-${post.month.toString().padStart(2, '0')}`
       acc[yearMonth] = (acc[yearMonth] || 0) + 1
@@ -216,7 +216,7 @@ export default async function BlogPage() {
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>カテゴリ</h3>
                 <div className="space-y-2">
                   {archiveData.categories.length > 0 ? (
-                    archiveData.categories.map((category: any) => (
+                    archiveData.categories.map((category: { _id: string; title: string; slug?: { current: string }; postCount: number }) => (
                       <Link 
                         key={category._id}
                         href={`/updates/category/${category.slug?.current || category._id}`} 
@@ -239,7 +239,7 @@ export default async function BlogPage() {
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>人気のタグ</h3>
                 <div className="flex flex-wrap gap-2">
                   {archiveData.tags.length > 0 ? (
-                    archiveData.tags.slice(0, 10).map((tag: any) => (
+                    archiveData.tags.slice(0, 10).map((tag: { _id: string; name: string; slug?: { current: string } }) => (
                       <Link 
                         key={tag._id}
                         href={`/updates/tag/${tag.slug?.current || tag._id}`} 

@@ -1,10 +1,10 @@
-import { User, MapPin, Calendar, Globe, Github, Twitter, Mail, BookOpen, Linkedin, Facebook, Briefcase, Award, Target, Code, Brain, Users, Instagram, Youtube, X } from 'lucide-react'
+import { User, Mail, BookOpen, Facebook, Briefcase, Award, Target, Code, Brain, Users, Instagram, X } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 // アイコンコンポーネントのマップ
 const getIconComponent = (iconName: string) => {
-  const icons: { [key: string]: any } = {
+  const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
     Code,
     Brain,
     Users,
