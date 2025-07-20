@@ -2,22 +2,6 @@ import { User, Mail, BookOpen, Facebook, Briefcase, Award, Target, Code, Brain, 
 import Link from 'next/link'
 import Image from 'next/image'
 
-// アイコンコンポーネントのマップ
-const getIconComponent = (iconName: string) => {
-  const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
-    Code,
-    Brain,
-    Users,
-    Target,
-    Award,
-    Briefcase,
-    User,
-    BookOpen,
-    Globe,
-    Mail,
-  }
-  return icons[iconName] || User
-}
 
 export default function ProfilePage() {
   return (

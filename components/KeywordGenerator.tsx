@@ -1,11 +1,21 @@
 import React from 'react'
 import { Button, Stack, Text } from '@sanity/ui'
-import { useFormValue, set, unset } from 'sanity'
+import { useFormValue, set } from 'sanity'
 
-export function KeywordGenerator({ onChange }) {
+interface KeywordGeneratorProps {
+  onChange: (patch: unknown) => void
+}
+
+export function KeywordGenerator({ onChange }: KeywordGeneratorProps) {
   const title = useFormValue(['title']) as string
   const excerpt = useFormValue(['excerpt']) as string
-  const body = useFormValue(['body']) as any[]
+  const body = useFormValue(['body']) as Array<{
+    _type?: string
+    children?: Array<{
+      _type?: string
+      text?: string
+    }>
+  }>
 
   const generateKeywords = () => {
     const bodyText = body

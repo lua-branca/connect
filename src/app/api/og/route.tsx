@@ -5,7 +5,7 @@ export const runtime = 'edge'
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url)
-    const title = searchParams.get('title') || 'LUA BLANCA CONNECT'
+    searchParams.get('title') || 'LUA BLANCA CONNECT'
     const category = searchParams.get('category') || 'AI活用事例'
     const date = searchParams.get('date') || ''
 
