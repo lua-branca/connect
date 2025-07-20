@@ -27,6 +27,10 @@ export const blogPost = defineType({
       type: 'reference',
       to: { type: 'author' },
       validation: (Rule) => Rule.required(),
+      initialValue: () => ({
+        _type: 'reference',
+        _ref: '38edee4d-ffe3-45a5-9b02-ab8a4755c862' // 福田美佐子のID
+      }),
     }),
     defineField({
       name: 'mainImage',
@@ -96,6 +100,7 @@ export const blogPost = defineType({
           title: 'キーワード',
           type: 'array',
           of: [{ type: 'string' }],
+          description: 'キーワードを手動で入力してください。AI活用、プログラミング、ビジネス、技術、体験記など'
         },
         {
           name: 'ogImage',

@@ -1,8 +1,6 @@
 import { User, MapPin, Calendar, Globe, Github, Twitter, Mail, BookOpen, Linkedin, Facebook, Briefcase, Award, Target, Code, Brain, Users, Instagram, Youtube, X } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getProfile } from '@/lib/profile'
-import { urlFor } from '@/lib/sanity'
 
 // アイコンコンポーネントのマップ
 const getIconComponent = (iconName: string) => {
@@ -21,8 +19,7 @@ const getIconComponent = (iconName: string) => {
   return icons[iconName] || User
 }
 
-export default async function ProfilePage() {
-  const profile = await getProfile()
+export default function ProfilePage() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-4xl mx-auto">
@@ -252,72 +249,6 @@ export default async function ProfilePage() {
           </div>
         </div>
 
-        {/* 職歴・経験 */}
-        {profile?.experience && profile.experience.length > 0 && (
-          <div className="bg-white rounded-lg shadow-md p-6 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <Briefcase className="w-6 h-6 mr-2 text-blue-600" />
-              職歴・経験
-            </h2>
-            <div className="space-y-6">
-              {profile.experience.map((exp, index) => (
-                <div key={index} className="border-l-4 border-blue-500 pl-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="text-lg font-semibold text-gray-800">{exp.company}</h3>
-                    <span className="text-sm text-gray-500">{exp.period}</span>
-                  </div>
-                  <p className="font-medium text-gray-700 mb-2">{exp.position}</p>
-                  <p className="text-gray-600 text-sm whitespace-pre-line">{exp.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* 提供サービス */}
-        {profile?.services && profile.services.length > 0 && (
-          <div className="bg-white rounded-lg shadow-md p-6 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <Target className="w-6 h-6 mr-2 text-blue-600" />
-              提供サービス
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {profile.services.map((service, index) => {
-                const IconComponent = getIconComponent(service.icon)
-                return (
-                  <div key={index} className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
-                    <div className="flex items-center mb-3">
-                      <IconComponent className="w-6 h-6 mr-2 text-blue-600" />
-                      <h3 className="font-semibold text-gray-800">{service.title}</h3>
-                    </div>
-                    <p className="text-gray-600 text-sm">{service.description}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* 実績・成果 */}
-        {profile?.achievements && profile.achievements.length > 0 && (
-          <div className="bg-white rounded-lg shadow-md p-6 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <Award className="w-6 h-6 mr-2 text-blue-600" />
-              実績・成果
-            </h2>
-            <div className="space-y-4">
-              {profile.achievements.map((achievement, index) => (
-                <div key={index} className="border-l-4 border-green-500 pl-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-gray-800">{achievement.title}</h3>
-                    <span className="text-sm text-gray-500">{achievement.year}</span>
-                  </div>
-                  <p className="text-gray-600 text-sm">{achievement.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
 
         {/* お問い合わせCTA */}

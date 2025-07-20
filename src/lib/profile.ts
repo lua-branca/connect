@@ -1,51 +1,10 @@
-import { client } from './sanity'
-import { Author } from '@/types'
-
-// プロフィール情報を取得
-export async function getProfile(): Promise<Author | null> {
-  const query = `
-    *[_type == "author" && slug.current == "lua-branca"][0] {
-      _id,
-      name,
-      title,
-      bio,
-      location,
-      website,
-      image {
-        asset->{
-          _id,
-          url
-        },
-        alt
-      },
-      skills[] {
-        category,
-        items
-      },
-      experience[] {
-        company,
-        position,
-        period,
-        description
-      },
-      services[] {
-        title,
-        description,
-        icon
-      },
-      achievements[] {
-        title,
-        description,
-        year
-      },
-      social {
-        twitter,
-        instagram,
-        youtube,
-        github
-      }
-    }
-  `
-  
-  return await client.fetch(query)
+// 静的なプロフィール情報
+export function getProfile() {
+  return {
+    name: "福田 美佐子",
+    title: "コンテンツ・AI活用コンサルタント",
+    bio: "技術とビジネスと共感力を兼ね備えたコンサルタント",
+    location: "東京",
+    website: "https://lua-branca.com"
+  }
 }

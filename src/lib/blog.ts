@@ -10,49 +10,21 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         _id,
         title,
         slug,
-        publishedAt,
         excerpt,
+        publishedAt,
+        author->{name, image},
+        categories[]->{_id, title, color},
+        tags[]->{_id, title},
         mainImage {
-          asset->{
-            _id,
-            url
-          },
+          asset->{_id, url},
           alt
-        },
-        categories[]->{
-          _id,
-          title,
-          slug
-        },
-        tags[]->{
-          _id,
-          name,
-          slug
-        },
-        author->{
-          _id,
-          name,
-          image {
-            asset->{
-              _id,
-              url
-            }
-          }
         }
       }
     `
-    
     const posts = await client.fetch(query)
-    
-    // Sanityからデータが取得できない場合、またはデータが空の場合はサンプルデータを使用
-    if (!posts || posts.length === 0) {
-      console.log('Using sample posts data as fallback')
-      return samplePosts
-    }
-    
-    return posts
+    return posts.length > 0 ? posts : samplePosts
   } catch (error) {
-    console.log('Failed to fetch from Sanity, using sample data:', error)
+    console.log('Failed to fetch posts from Sanity, using sample data:', error)
     return samplePosts
   }
 }
@@ -65,48 +37,20 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
         _id,
         title,
         slug,
-        publishedAt,
         excerpt,
-        body,
+        publishedAt,
+        author->{name, image},
+        categories[]->{_id, title, color},
+        tags[]->{_id, title},
         mainImage {
-          asset->{
-            _id,
-            url
-          },
+          asset->{_id, url},
           alt
         },
-        categories[]->{
-          _id,
-          title,
-          slug
-        },
-        tags[]->{
-          _id,
-          name,
-          slug
-        },
-        author->{
-          _id,
-          name,
-          image {
-            asset->{
-              _id,
-              url
-            }
-          }
-        }
+        body
       }
     `
-    
     const post = await client.fetch(query, { slug })
-    
-    // Sanityからデータが取得できない場合はサンプルデータから検索
-    if (!post) {
-      const samplePost = samplePosts.find(p => p.slug.current === slug)
-      return samplePost || null
-    }
-    
-    return post
+    return post || samplePosts.find(p => p.slug.current === slug) || null
   } catch (error) {
     console.log('Failed to fetch post from Sanity, using sample data:', error)
     const samplePost = samplePosts.find(p => p.slug.current === slug)
@@ -116,98 +60,16 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
 // カテゴリ別記事を取得
 export async function getPostsByCategory(categoryId: string): Promise<BlogPost[]> {
-  const query = `
-    *[_type == "blogPost" && references($categoryId)] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      publishedAt,
-      excerpt,
-      mainImage {
-        asset->{
-          _id,
-          url
-        }
-      },
-      categories[]->{
-        _id,
-        title
-      },
-      tags[]->{
-        _id,
-        name
-      }
-    }
-  `
-  
-  return await client.fetch(query, { categoryId })
+  return samplePosts.filter(p => p.categories.some(c => c._id === categoryId));
 }
 
 // タグ別記事を取得
 export async function getPostsByTag(tagId: string): Promise<BlogPost[]> {
-  const query = `
-    *[_type == "blogPost" && references($tagId)] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      publishedAt,
-      excerpt,
-      mainImage {
-        asset->{
-          _id,
-          url
-        }
-      },
-      categories[]->{
-        _id,
-        title
-      },
-      tags[]->{
-        _id,
-        name
-      }
-    }
-  `
-  
-  return await client.fetch(query, { tagId })
+  return samplePosts.filter(p => p.tags.some(t => t._id === tagId));
 }
 
 // サイドバー用のアーカイブデータを取得
 export async function getArchiveData() {
-  try {
-    const query = `
-      {
-        "yearArchives": *[_type == "blogPost"] | order(publishedAt desc) {
-          "year": dateTime(publishedAt).year,
-          "month": dateTime(publishedAt).month,
-          publishedAt
-        },
-        "categories": *[_type == "category"] {
-          _id,
-          title,
-          slug,
-          "postCount": count(*[_type == "blogPost" && references(^._id)])
-        }[postCount > 0] | order(postCount desc),
-        "tags": *[_type == "tag"] {
-          _id,
-          name,
-          slug,
-          "postCount": count(*[_type == "blogPost" && references(^._id)])
-        }[postCount > 0] | order(postCount desc)
-      }
-    `
-    
-    const archiveData = await client.fetch(query)
-    
-    // Sanityからデータが取得できない場合はサンプルデータを使用
-    if (!archiveData || (!archiveData.yearArchives?.length && !archiveData.categories?.length && !archiveData.tags?.length)) {
-      console.log('Using sample archive data as fallback')
-      return sampleArchiveData
-    }
-    
-    return archiveData
-  } catch (error) {
-    console.log('Failed to fetch archive data from Sanity, using sample data:', error)
-    return sampleArchiveData
-  }
+  console.log('Using sample archive data as fallback')
+  return sampleArchiveData
 }
