@@ -25,8 +25,8 @@ export default defineConfig({
   
   document: {
     productionUrl: async (prev, { document }) => {
-      if (document._type === 'blogPost' && document.slug?.current) {
-        return `http://localhost:3000/updates/${document.slug.current}`
+      if (document._type === 'blogPost' && (document as any).slug?.current) {
+        return `http://localhost:3000/updates/${(document as any).slug.current}`
       }
       return prev
     }
