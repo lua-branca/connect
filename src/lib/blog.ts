@@ -6,7 +6,7 @@ import { samplePosts, sampleArchiveData } from '@/data/sample-posts'
 export async function getAllPosts(): Promise<BlogPost[]> {
   try {
     const query = `
-      *[_type == "blogPost"] | order(publishedAt desc) {
+      *[_type == "blogPost" && defined(publishedAt)] | order(publishedAt desc) {
         _id,
         title,
         slug,
@@ -177,7 +177,7 @@ export async function getArchiveData() {
   try {
     const query = `
       {
-        "yearArchives": *[_type == "blogPost"] | order(publishedAt desc) {
+        "yearArchives": *[_type == "blogPost" && defined(publishedAt)] | order(publishedAt desc) {
           "year": dateTime(publishedAt).year,
           "month": dateTime(publishedAt).month,
           publishedAt
