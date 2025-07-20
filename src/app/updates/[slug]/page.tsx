@@ -7,6 +7,7 @@ import { Calendar, User, Tag, ArrowLeft, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 import { Metadata } from 'next'
+import AIExperienceArticle from '@/components/AIExperienceArticle'
 
 interface PageProps {
   params: {
@@ -158,7 +159,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {/* 記事本文 */}
         <article className="prose prose-lg max-w-none">
-          {post.body && Array.isArray(post.body) && post.body.length > 0 ? (
+          {slug === 'ai-programming-experience' ? (
+            <AIExperienceArticle />
+          ) : post.body && Array.isArray(post.body) && post.body.length > 0 ? (
             <PortableText
               value={post.body}
               components={{
