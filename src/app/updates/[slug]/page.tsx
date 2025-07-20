@@ -167,7 +167,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <AIExperienceArticle />
           ) : post.body && Array.isArray(post.body) && post.body.length > 0 ? (
             <PortableText
-              value={post.body}
+              value={post.body as any}
               components={{
                 block: {
                   normal: ({ children }) => <p className="mb-4 leading-relaxed" style={{color: '#2D5A5A', opacity: 0.9}}>{children}</p>,
