@@ -13,13 +13,7 @@ export default defineConfig({
   dataset: 'production',
   
   plugins: [
-    deskTool({
-      previewUrl: {
-        origin: 'http://localhost:3000',
-        preview: '/api/preview',
-        draftMode: '/api/draft-mode/enable'
-      }
-    }), 
+    deskTool(), 
     visionTool(), 
     colorInput(), 
     codeInput()
