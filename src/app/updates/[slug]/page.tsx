@@ -1,4 +1,4 @@
-import { getPostBySlug } from '@/lib/blog'
+import { getPostBySlug, getAdjacentPosts, getRelatedPosts } from '@/lib/blog'
 import { BlogPost } from '@/types'
 import { notFound } from 'next/navigation'
 import { format } from 'date-fns'
@@ -66,6 +66,10 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) {
     notFound()
   }
+
+  // 前後の記事と関連記事を取得
+  const { previousPost, nextPost } = await getAdjacentPosts(slug)
+  const relatedPosts = await getRelatedPosts(post, 3)
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -207,143 +211,90 @@ export default async function BlogPostPage({ params }: PageProps) {
         </article>
 
             {/* 前後記事ナビゲーション */}
-            <div className="mt-12 pt-8" style={{borderTop: '1px solid #A8D5D0'}}>
-              <div className="flex justify-between items-center">
-                {/* 前の記事 */}
-                <div className="text-left">
-                  <Link
-                    href="/updates/previous-post"
-                    className="inline-flex items-center font-medium hover:opacity-80 transition-colors"
-                    style={{color: '#5BBCB6'}}
-                  >
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    <div>
-                      <div className="text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>前の記事</div>
-                      <div className="text-sm">AI活用事例：営業効率化の実践例</div>
-                    </div>
-                  </Link>
-                </div>
+            {(previousPost || nextPost) && (
+              <div className="mt-12 pt-8" style={{borderTop: '1px solid #A8D5D0'}}>
+                <div className="flex justify-between items-center">
+                  {/* 前の記事 */}
+                  <div className="text-left flex-1">
+                    {previousPost ? (
+                      <Link
+                        href={`/updates/${previousPost.slug.current}`}
+                        className="inline-flex items-center font-medium hover:opacity-80 transition-colors"
+                        style={{color: '#5BBCB6'}}
+                      >
+                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        <div>
+                          <div className="text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>前の記事</div>
+                          <div className="text-sm max-w-xs truncate">{previousPost.title}</div>
+                        </div>
+                      </Link>
+                    ) : (
+                      <div></div>
+                    )}
+                  </div>
 
-                {/* 次の記事 */}
-                <div className="text-right">
-                  <Link
-                    href="/updates/next-post"
-                    className="inline-flex items-center font-medium hover:opacity-80 transition-colors"
-                    style={{color: '#5BBCB6'}}
-                  >
-                    <div className="text-right">
-                      <div className="text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>次の記事</div>
-                      <div className="text-sm">ChatGPT活用で業務効率10倍アップ</div>
-                    </div>
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                  {/* 次の記事 */}
+                  <div className="text-right flex-1">
+                    {nextPost ? (
+                      <Link
+                        href={`/updates/${nextPost.slug.current}`}
+                        className="inline-flex items-center font-medium hover:opacity-80 transition-colors justify-end"
+                        style={{color: '#5BBCB6'}}
+                      >
+                        <div className="text-right">
+                          <div className="text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>次の記事</div>
+                          <div className="text-sm max-w-xs truncate">{nextPost.title}</div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    ) : (
+                      <div></div>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             {/* 関連記事セクション */}
-            <div className="mt-16">
-              <h3 className="text-2xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>関連記事</h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                {/* 関連記事1 */}
-                <Link
-                  href="/updates/related-post-1"
-                  className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <img
-                    src="/default-og-image.png"
-                    alt="AI導入の成功事例"
-                    className="h-48 w-full object-cover"
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center mb-2 text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>
-                      <Calendar className="w-3 h-3 mr-1" />
-                      2024年12月10日
-                    </div>
-                    <h4 className="text-lg font-semibold mb-2 group-hover:opacity-80" style={{color: '#2D5A5A'}}>
-                      AI導入の成功事例：中小企業でも実現可能な効率化
-                    </h4>
-                    <p className="text-sm line-clamp-2" style={{color: '#2D5A5A', opacity: 0.8}}>
-                      従業員20名の企業でAIを導入し、業務効率を大幅に改善した実例をご紹介します...
-                    </p>
-                  </div>
-                </Link>
-
-                {/* 関連記事2 */}
-                <Link
-                  href="/updates/related-post-2"
-                  className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <img
-                    src="/default-og-image.png"
-                    alt="Claude活用術"
-                    className="h-48 w-full object-cover"
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center mb-2 text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>
-                      <Calendar className="w-3 h-3 mr-1" />
-                      2024年12月05日
-                    </div>
-                    <h4 className="text-lg font-semibold mb-2 group-hover:opacity-80" style={{color: '#2D5A5A'}}>
-                      Claude活用術：プロジェクト管理を効率化する方法
-                    </h4>
-                    <p className="text-sm line-clamp-2" style={{color: '#2D5A5A', opacity: 0.8}}>
-                      プロジェクト管理におけるClaudeの活用方法と実際の運用事例を詳しく解説...
-                    </p>
-                  </div>
-                </Link>
-
-                {/* 関連記事3 */}
-                <Link
-                  href="/updates/related-post-3"
-                  className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <img
-                    src="/default-og-image.png"
-                    alt="AIマーケティング"
-                    className="h-48 w-full object-cover"
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center mb-2 text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>
-                      <Calendar className="w-3 h-3 mr-1" />
-                      2024年11月28日
-                    </div>
-                    <h4 className="text-lg font-semibold mb-2 group-hover:opacity-80" style={{color: '#2D5A5A'}}>
-                      AIマーケティングで顧客エンゲージメント向上
-                    </h4>
-                    <p className="text-sm line-clamp-2" style={{color: '#2D5A5A', opacity: 0.8}}>
-                      AI技術を活用したマーケティング戦略で、顧客との関係性を深める手法をご紹介...
-                    </p>
-                  </div>
-                </Link>
+            {relatedPosts.length > 0 && (
+              <div className="mt-16">
+                <h3 className="text-2xl font-bold mb-8 text-center" style={{color: '#2D5A5A'}}>関連記事</h3>
+                <div className={`grid gap-6 ${relatedPosts.length === 1 ? 'md:grid-cols-1 max-w-md mx-auto' : relatedPosts.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+                  {relatedPosts.map((relatedPost) => (
+                    <Link
+                      key={relatedPost._id}
+                      href={`/updates/${relatedPost.slug.current}`}
+                      className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    >
+                      <img
+                        src={relatedPost.mainImage?.asset?.url || "/default-og-image.png"}
+                        alt={relatedPost.mainImage?.alt || relatedPost.title}
+                        className="h-48 w-full object-cover"
+                      />
+                      <div className="p-6">
+                        <div className="flex items-center mb-2 text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>
+                          <Calendar className="w-3 h-3 mr-1" />
+                          {format(new Date(relatedPost.publishedAt), 'yyyy年MM月dd日', { locale: ja })}
+                        </div>
+                        <h4 className="text-lg font-semibold mb-2 group-hover:opacity-80 line-clamp-2" style={{color: '#2D5A5A'}}>
+                          {relatedPost.title}
+                        </h4>
+                        {relatedPost.excerpt && (
+                          <p className="text-sm line-clamp-2" style={{color: '#2D5A5A', opacity: 0.8}}>
+                            {relatedPost.excerpt}
+                          </p>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* サイドバー */}
           <div className="lg:col-span-1">
             <div className="space-y-6">
-              {/* 年別アーカイブ */}
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>年別アーカイブ</h3>
-                <div className="space-y-2">
-                  <Link 
-                    href="/updates/2024" 
-                    className="block py-2 px-3 rounded-lg transition-colors hover:opacity-80"
-                    style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
-                  >
-                    2024年 (3)
-                  </Link>
-                  <Link 
-                    href="/updates/2023" 
-                    className="block py-2 px-3 rounded-lg transition-colors"
-                    style={{color: '#2D5A5A', opacity: 0.7}}
-                  >
-                    2023年 (5)
-                  </Link>
-                </div>
-              </div>
-
               {/* カテゴリ一覧 */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>カテゴリ</h3>
