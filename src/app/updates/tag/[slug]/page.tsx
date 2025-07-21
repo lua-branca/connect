@@ -132,7 +132,7 @@ export default async function TagPage({ params }: PageProps) {
 
                   {/* その他のタグ */}
                   <div className="flex flex-wrap items-center gap-2 mb-4">
-                    {post.tags?.filter(tag => tag._id !== params.slug).map((tag) => (
+                    {post.tags?.filter(tag => tag._id !== slug).map((tag) => (
                       <Link
                         key={tag._id}
                         href={`/updates/tag/${tag.slug?.current || tag._id}`}
@@ -163,11 +163,11 @@ export default async function TagPage({ params }: PageProps) {
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold mb-8" style={{color: '#2D5A5A'}}>関連タグ</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {Object.entries(tagNames).map(([slug, name]) => (
-              slug !== params.slug && (
+            {Object.entries(tagNames).map(([tagSlug, name]) => (
+              tagSlug !== slug && (
                 <Link
-                  key={slug}
-                  href={`/updates/tag/${slug}`}
+                  key={tagSlug}
+                  href={`/updates/tag/${tagSlug}`}
                   className="inline-flex items-center px-3 py-2 rounded-full hover:opacity-80 transition-colors"
                   style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
                 >

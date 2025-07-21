@@ -138,11 +138,11 @@ export default async function CategoryPage({ params }: PageProps) {
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">他のカテゴリも見る</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {Object.entries(categoryNames).map(([slug, name]) => (
-              slug !== params.slug && (
+            {Object.entries(categoryNames).map(([categorySlug, name]) => (
+              categorySlug !== slug && (
                 <Link
-                  key={slug}
-                  href={`/blog/category/${slug}`}
+                  key={categorySlug}
+                  href={`/blog/category/${categorySlug}`}
                   className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
                 >
                   <Folder className="w-4 h-4 mr-2" />
