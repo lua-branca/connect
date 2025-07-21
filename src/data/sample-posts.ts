@@ -22,7 +22,6 @@ export const samplePosts: BlogPost[] = [
         _id: 'ai-experience',
         title: 'AI活用体験記',
         slug: {
-          _type: 'slug',
           current: 'ai-experience'
         }
       }
@@ -32,7 +31,6 @@ export const samplePosts: BlogPost[] = [
         _id: 'ai-programming',
         name: 'AI活用',
         slug: {
-          _type: 'slug', 
           current: 'ai-programming'
         }
       },
@@ -40,7 +38,6 @@ export const samplePosts: BlogPost[] = [
         _id: 'live-coding',
         name: 'ライブコーディング',
         slug: {
-          _type: 'slug',
           current: 'live-coding'
         }
       },
@@ -48,7 +45,6 @@ export const samplePosts: BlogPost[] = [
         _id: 'experience',
         name: '体験談',
         slug: {
-          _type: 'slug',
           current: 'experience'
         }
       }
@@ -72,7 +68,6 @@ export const sampleCategories = [
     _id: 'ai-experience',
     title: 'AI活用体験記',
     slug: {
-      _type: 'slug',
       current: 'ai-experience'
     },
     postCount: 1
@@ -84,7 +79,6 @@ export const sampleTags = [
     _id: 'ai-programming',
     name: 'AI活用',
     slug: {
-      _type: 'slug',
       current: 'ai-programming'
     },
     postCount: 1
@@ -93,7 +87,6 @@ export const sampleTags = [
     _id: 'live-coding',
     name: 'ライブコーディング',
     slug: {
-      _type: 'slug',
       current: 'live-coding'
     },
     postCount: 1
@@ -102,7 +95,6 @@ export const sampleTags = [
     _id: 'experience',
     name: '体験談',
     slug: {
-      _type: 'slug',
       current: 'experience'
     },
     postCount: 1
