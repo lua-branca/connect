@@ -1,6 +1,6 @@
 import { client } from './sanity'
 import { BlogPost } from '@/types'
-import { samplePosts, sampleArchiveData } from '@/data/sample-posts'
+// Sanityのみを使用（sample-postsは削除済み）
 
 // ブログ記事一覧を取得
 export async function getAllPosts(): Promise<BlogPost[]> {
@@ -22,10 +22,10 @@ export async function getAllPosts(): Promise<BlogPost[]> {
       }
     `
     const posts = await client.fetch(query)
-    return posts.length > 0 ? posts : samplePosts
+    return posts
   } catch (error) {
-    console.log('Failed to fetch posts from Sanity, using sample data:', error)
-    return samplePosts
+    console.log('Failed to fetch posts from Sanity:', error)
+    return []
   }
 }
 
@@ -50,22 +50,22 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       }
     `
     const post = await client.fetch(query, { slug })
-    return post || samplePosts.find(p => p.slug.current === slug) || null
+    return post || null
   } catch (error) {
     console.log('Failed to fetch post from Sanity, using sample data:', error)
-    const samplePost = samplePosts.find(p => p.slug.current === slug)
+    // No fallback needed - Sanity only
     return samplePost || null
   }
 }
 
 // カテゴリ別記事を取得
 export async function getPostsByCategory(categoryId: string): Promise<BlogPost[]> {
-  return samplePosts.filter(p => p.categories.some(c => c._id === categoryId));
+  return [];
 }
 
 // タグ別記事を取得
 export async function getPostsByTag(tagId: string): Promise<BlogPost[]> {
-  return samplePosts.filter(p => p.tags.some(t => t._id === tagId));
+  return [];
 }
 
 // 前後の記事を取得
@@ -128,6 +128,27 @@ export async function getRelatedPosts(currentPost: BlogPost, limit: number = 3):
 
 // サイドバー用のアーカイブデータを取得
 export async function getArchiveData() {
-  console.log('Using sample archive data as fallback')
-  return sampleArchiveData
+  try {
+    const posts = await getAllPosts()
+    
+    // 年別アーカイブデータを生成
+    const yearArchives = posts.map(post => ({
+      year: new Date(post.publishedAt).getFullYear(),
+      month: new Date(post.publishedAt).getMonth() + 1,
+      publishedAt: post.publishedAt
+    }))
+    
+    return {
+      yearArchives,
+      categories: [], // Sanityから取得する場合は別途実装
+      tags: []        // Sanityから取得する場合は別途実装
+    }
+  } catch (error) {
+    console.log('Failed to fetch archive data:', error)
+    return {
+      yearArchives: [],
+      categories: [],
+      tags: []
+    }
+  }
 }
