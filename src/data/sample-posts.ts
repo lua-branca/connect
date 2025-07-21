@@ -6,7 +6,6 @@ export const samplePosts: BlogPost[] = [
     _id: 'ai-programming-experience',
     title: 'AIとプログラミング：実際にこのサイトを作ってみた体験記',
     slug: {
-      _type: 'slug',
       current: 'ai-programming-experience'
     },
     publishedAt: '2025-07-20T00:00:00Z',
