@@ -52,19 +52,18 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     const post = await client.fetch(query, { slug })
     return post || null
   } catch (error) {
-    console.log('Failed to fetch post from Sanity, using sample data:', error)
-    // No fallback needed - Sanity only
-    return samplePost || null
+    console.log('Failed to fetch post from Sanity:', error)
+    return null
   }
 }
 
 // カテゴリ別記事を取得
-export async function getPostsByCategory(categoryId: string): Promise<BlogPost[]> {
+export async function getPostsByCategory(_categoryId: string): Promise<BlogPost[]> {
   return [];
 }
 
 // タグ別記事を取得
-export async function getPostsByTag(tagId: string): Promise<BlogPost[]> {
+export async function getPostsByTag(_tagId: string): Promise<BlogPost[]> {
   return [];
 }
 
