@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { trackContactForm } from '@/lib/gtag'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -60,6 +61,8 @@ AI活用アドバイザー 福田美佐子
 
       if (response.ok) {
         setSubmitStatus('success')
+        // Google Analytics イベント追跡
+        trackContactForm()
         // フォームをリセット
         setFormData({
           name: '',
