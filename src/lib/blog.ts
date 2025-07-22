@@ -1,5 +1,5 @@
 import { client } from './sanity'
-import { BlogPost } from '@/types'
+import { BlogPost, CategoryWithCount, TagWithCount } from '@/types'
 // Sanityのみを使用（sample-postsは削除済み）
 
 // ブログ記事一覧を取得
@@ -46,7 +46,8 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
           asset->{_id, url},
           alt
         },
-        body
+        body,
+        markdownContent
       }
     `
     const post = await client.fetch(query, { slug })
@@ -58,13 +59,29 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 }
 
 // カテゴリ別記事を取得
-export async function getPostsByCategory(_categoryId: string): Promise<BlogPost[]> {
-  return [];
+export async function getPostsByCategory(categorySlug: string): Promise<BlogPost[]> {
+  try {
+    const posts = await getAllPosts()
+    return posts.filter(post => 
+      post.categories?.some(cat => cat.slug?.current === categorySlug)
+    )
+  } catch (error) {
+    console.log('Failed to fetch posts by category:', error)
+    return []
+  }
 }
 
 // タグ別記事を取得
-export async function getPostsByTag(_tagId: string): Promise<BlogPost[]> {
-  return [];
+export async function getPostsByTag(tagSlug: string): Promise<BlogPost[]> {
+  try {
+    const posts = await getAllPosts()
+    return posts.filter(post => 
+      post.tags?.some(tag => tag.slug?.current === tagSlug)
+    )
+  } catch (error) {
+    console.log('Failed to fetch posts by tag:', error)
+    return []
+  }
 }
 
 // 前後の記事を取得
@@ -149,5 +166,38 @@ export async function getArchiveData() {
       categories: [],
       tags: []
     }
+  }
+}
+
+// サイドバー用のカテゴリ一覧を取得
+export async function getSidebarCategories(): Promise<CategoryWithCount[]> {
+  try {
+    console.log('Fetching sidebar categories...')
+    return []
+  } catch (error) {
+    console.log('Failed to fetch sidebar categories:', error)
+    return []
+  }
+}
+
+// サイドバー用のタグ一覧を取得
+export async function getSidebarTags(): Promise<TagWithCount[]> {
+  try {
+    console.log('Fetching sidebar tags...')
+    return []
+  } catch (error) {
+    console.log('Failed to fetch sidebar tags:', error)
+    return []
+  }
+}
+
+// サイドバー用の最近の投稿を取得
+export async function getRecentPosts(limit: number = 5) {
+  try {
+    console.log('Fetching recent posts...')
+    return []
+  } catch (error) {
+    console.log('Failed to fetch recent posts:', error)
+    return []
   }
 }

@@ -1,5 +1,5 @@
-import { getPostBySlug, getAdjacentPosts, getRelatedPosts } from '@/lib/blog'
-import { BlogPost } from '@/types'
+import { getPostBySlug, getAdjacentPosts, getRelatedPosts, getSidebarCategories, getSidebarTags, getRecentPosts } from '@/lib/blog'
+import { BlogPost, CategoryWithCount, TagWithCount } from '@/types'
 import { notFound } from 'next/navigation'
 import { format } from 'date-fns'
 import { ja } from 'date-fns/locale'
@@ -8,6 +8,8 @@ import Link from 'next/link'
 import { PortableText, type PortableTextBlock } from '@portabletext/react'
 import { Metadata } from 'next'
 import AIExperienceArticle from '@/components/AIExperienceArticle'
+import Markdown from 'markdown-to-jsx'
+import MarkdownRenderer from '@/components/MarkdownRenderer'
 
 interface PageProps {
   params: Promise<{
@@ -70,6 +72,13 @@ export default async function BlogPostPage({ params }: PageProps) {
   // 前後の記事と関連記事を取得
   const { previousPost, nextPost } = await getAdjacentPosts(slug)
   const relatedPosts = await getRelatedPosts(post, 3)
+  
+  // サイドバー用データを取得
+  const [categories, tags, recentPosts] = await Promise.all([
+    getSidebarCategories(),
+    getSidebarTags(),
+    getRecentPosts(5)
+  ])
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -84,9 +93,9 @@ export default async function BlogPostPage({ params }: PageProps) {
           更新情報一覧に戻る
         </Link>
 
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-1 gap-8">
           {/* メインコンテンツ */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-1">
 
         {/* メイン画像 */}
         <div className="mb-8">
@@ -165,6 +174,8 @@ export default async function BlogPostPage({ params }: PageProps) {
         <article className="prose prose-lg max-w-none">
           {slug === 'ai-programming-experience' ? (
             <AIExperienceArticle />
+          ) : (post as BlogPost & { markdownContent?: string }).markdownContent ? (
+            <MarkdownRenderer content={(post as BlogPost & { markdownContent?: string }).markdownContent || ''} />
           ) : post.body && Array.isArray(post.body) && post.body.length > 0 ? (
             <PortableText
               value={post.body as PortableTextBlock[]}
@@ -292,73 +303,73 @@ export default async function BlogPostPage({ params }: PageProps) {
             )}
           </div>
 
-          {/* サイドバー */}
+          {/* サイドバー - 一時的に無効化 */}
+          {/*
           <div className="lg:col-span-1">
             <div className="space-y-6">
-              {/* カテゴリ一覧 */}
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>カテゴリ</h3>
-                <div className="space-y-2">
-                  <Link 
-                    href="/updates/category/ai-trends" 
-                    className="block py-2 px-3 rounded-lg transition-colors"
-                    style={{color: '#2D5A5A', opacity: 0.8}}
-                  >
-                    AIトレンド (2)
-                  </Link>
-                  <Link 
-                    href="/updates/category/case-study" 
-                    className="block py-2 px-3 rounded-lg transition-colors"
-                    style={{color: '#2D5A5A', opacity: 0.8}}
-                  >
-                    実事例 (3)
-                  </Link>
-                  <Link 
-                    href="/updates/category/tips" 
-                    className="block py-2 px-3 rounded-lg transition-colors"
-                    style={{color: '#2D5A5A', opacity: 0.8}}
-                  >
-                    活用ティップス (1)
-                  </Link>
+                <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>最近の投稿</h3>
+                <div className="space-y-3">
+                  {recentPosts.length > 0 ? recentPosts.map((recentPost: BlogPost) => (
+                    <div
+                      key={recentPost._id}
+                      className="block"
+                    >
+                      <h4 className="text-sm font-medium mb-1 line-clamp-2" style={{color: '#2D5A5A'}}>
+                        {recentPost.title}
+                      </h4>
+                      <div className="text-xs" style={{color: '#2D5A5A', opacity: 0.6}}>
+                        {format(new Date(recentPost.publishedAt), 'yyyy年MM月dd日', { locale: ja })}
+                      </div>
+                    </div>
+                  )) : (
+                    <p className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
+                      投稿がありません
+                    </p>
+                  )}
                 </div>
               </div>
 
-              {/* 人気のタグ */}
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>カテゴリ</h3>
+                <div className="space-y-2">
+                  {categories.length > 0 ? categories.map((category: CategoryWithCount) => (
+                    <div 
+                      key={category._id}
+                      className="block py-2 px-3 rounded-lg"
+                      style={{color: '#2D5A5A', opacity: 0.8}}
+                    >
+                      {category.title} ({category.postCount || 0})
+                    </div>
+                  )) : (
+                    <p className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
+                      カテゴリがありません
+                    </p>
+                  )}
+                </div>
+              </div>
+
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>人気のタグ</h3>
                 <div className="flex flex-wrap gap-2">
-                  <Link 
-                    href="/updates/tag/chatgpt" 
-                    className="inline-block px-3 py-1 text-xs rounded-full transition-colors"
-                    style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
-                  >
-                    ChatGPT
-                  </Link>
-                  <Link 
-                    href="/updates/tag/claude" 
-                    className="inline-block px-3 py-1 text-xs rounded-full transition-colors"
-                    style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
-                  >
-                    Claude
-                  </Link>
-                  <Link 
-                    href="/updates/tag/automation" 
-                    className="inline-block px-3 py-1 text-xs rounded-full transition-colors"
-                    style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
-                  >
-                    自動化
-                  </Link>
-                  <Link 
-                    href="/updates/tag/marketing" 
-                    className="inline-block px-3 py-1 text-xs rounded-full transition-colors"
-                    style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
-                  >
-                    マーケティング
-                  </Link>
+                  {tags.length > 0 ? tags.map((tag: TagWithCount) => (
+                    <div 
+                      key={tag._id}
+                      className="inline-block px-3 py-1 text-xs rounded-full"
+                      style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
+                    >
+                      {tag.name}
+                    </div>
+                  )) : (
+                    <p className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
+                      タグがありません
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
           </div>
+          */}
         </div>
       </div>
     </div>

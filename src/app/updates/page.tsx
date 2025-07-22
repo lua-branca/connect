@@ -41,9 +41,9 @@ export default async function BlogPage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-1 gap-8">
           {/* メインコンテンツ */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-1">
             {/* 記事一覧 */}
             {posts.length > 0 ? (
               <div className="space-y-8">
@@ -158,23 +158,22 @@ export default async function BlogPage() {
             )}
           </div>
 
-          {/* サイドバー */}
+          {/* サイドバー - 一時的に無効化 */}
+          {/*
           <div className="lg:col-span-1">
             <div className="space-y-6">
-              {/* 年別アーカイブ */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>年別アーカイブ</h3>
                 <div className="space-y-2">
                   {sortedYears.length > 0 ? (
                     sortedYears.map((year, index) => (
-                      <Link 
+                      <div 
                         key={year}
-                        href={`/updates/year/${year}`} 
-                        className={`block py-2 px-3 rounded-lg transition-colors hover:opacity-80 ${index === 0 ? '' : ''}`}
+                        className={`block py-2 px-3 rounded-lg ${index === 0 ? '' : ''}`}
                         style={index === 0 ? {backgroundColor: '#E0F2F1', color: '#2D5A5A'} : {color: '#2D5A5A', opacity: 0.7}}
                       >
                         {year}年 ({yearCounts[year]})
-                      </Link>
+                      </div>
                     ))
                   ) : (
                     <div className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
@@ -184,7 +183,6 @@ export default async function BlogPage() {
                 </div>
               </div>
 
-              {/* 月別アーカイブ */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>最近の投稿</h3>
                 <div className="space-y-2">
@@ -193,14 +191,13 @@ export default async function BlogPage() {
                       const [year, month] = yearMonth.split('-')
                       const monthName = format(new Date(Number(year), Number(month) - 1), 'yyyy年MM月', { locale: ja })
                       return (
-                        <Link 
+                        <div 
                           key={yearMonth}
-                          href={`/updates/month/${yearMonth}`} 
-                          className="block py-2 px-3 rounded-lg transition-colors"
+                          className="block py-2 px-3 rounded-lg"
                           style={{color: '#2D5A5A', opacity: 0.8}}
                         >
                           {monthName} ({monthCounts[yearMonth]})
-                        </Link>
+                        </div>
                       )
                     })
                   ) : (
@@ -211,20 +208,18 @@ export default async function BlogPage() {
                 </div>
               </div>
 
-              {/* カテゴリ一覧 */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>カテゴリ</h3>
                 <div className="space-y-2">
                   {archiveData.categories.length > 0 ? (
                     archiveData.categories.map((category: { _id: string; title: string; slug?: { current: string }; postCount: number }) => (
-                      <Link 
+                      <div 
                         key={category._id}
-                        href={`/updates/category/${category.slug?.current || category._id}`} 
-                        className="block py-2 px-3 rounded-lg transition-colors"
+                        className="block py-2 px-3 rounded-lg"
                         style={{color: '#2D5A5A', opacity: 0.8}}
                       >
                         {category.title} ({category.postCount})
-                      </Link>
+                      </div>
                     ))
                   ) : (
                     <div className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
@@ -234,20 +229,18 @@ export default async function BlogPage() {
                 </div>
               </div>
 
-              {/* タグクラウド */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-bold mb-4" style={{color: '#2D5A5A'}}>人気のタグ</h3>
                 <div className="flex flex-wrap gap-2">
                   {archiveData.tags.length > 0 ? (
                     archiveData.tags.slice(0, 10).map((tag: { _id: string; name: string; slug?: { current: string } }) => (
-                      <Link 
+                      <div 
                         key={tag._id}
-                        href={`/updates/tag/${tag.slug?.current || tag._id}`} 
-                        className="inline-block px-3 py-1 text-xs rounded-full transition-colors"
+                        className="inline-block px-3 py-1 text-xs rounded-full"
                         style={{backgroundColor: '#E0F2F1', color: '#2D5A5A'}}
                       >
                         {tag.name}
-                      </Link>
+                      </div>
                     ))
                   ) : (
                     <div className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
@@ -258,6 +251,7 @@ export default async function BlogPage() {
               </div>
             </div>
           </div>
+          */}
         </div>
       </div>
     </div>

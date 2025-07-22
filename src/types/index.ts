@@ -38,6 +38,28 @@ export interface Tag {
   slug?: {
     current: string
   }
+  postCount?: number
+}
+
+// Category with count
+export interface CategoryWithCount {
+  _id: string
+  title: string
+  slug: {
+    current: string
+  }
+  description?: string
+  postCount: number
+}
+
+// Tag with count
+export interface TagWithCount {
+  _id: string
+  name: string
+  slug?: {
+    current: string
+  }
+  postCount: number
 }
 
 // Author type

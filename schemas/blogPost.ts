@@ -79,6 +79,13 @@ export const blogPost = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'markdownContent',
+      title: 'マークダウン本文',
+      type: 'text',
+      rows: 30,
+      description: 'マークダウン形式で記事を入力'
+    }),
+    defineField({
       name: 'seo',
       title: 'SEO',
       type: 'object',

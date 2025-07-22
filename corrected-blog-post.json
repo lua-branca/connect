@@ -1,0 +1,540 @@
+{
+  "_id": "sPR0RMXZgUr7qoxEYQqbBY",
+  "_type": "blogPost",
+  "title": "ウェブディレクターがClaude Codeで企業サイトを構築してみた〜工数96%削減、コード0行の衝撃体験記〜",
+  "slug": {
+    "_type": "slug",
+    "current": "ai-website-development-experience"
+  },
+  "excerpt": "ウェブディレクターがClaude Codeを使って企業サイトを0から構築し、従来制作の96%コスト削減を実現した実体験レポート。TypeScriptエラーとの格闘、Vercelデプロイの試行錯誤、DNS設定の複雑さなど、つまづきポイントや制約も含めて正直にお伝えします。",
+  "publishedAt": "2025-07-22T02:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "はじめに"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "AI時代の到来により、ウェブ制作の現場は大きく変わろうとしています。特に「Claude Code」のようなAIコーディングツールの登場で、これまでプログラマーやコーダーに依存していた制作プロセスが根本的に変化する可能性が見えてきました。"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "今回、ウェブディレクターの私が実際にClaude Codeを使って企業サイトを0から構築し、独自ドメインでの公開まで完了させた実体験をレポートします。結果的に"
+        },
+        {
+          "_type": "span",
+          "text": "従来制作の96%コスト削減",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": "を実現しましたが、決して楽な道のりではありませんでした。"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "この記事では、良い面だけでなく、つまづいたポイントや制約も含めて正直にお伝えします。"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "私の背景・前提条件"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "制作者プロフィール"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "職歴：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " ウェブディレクター経験者"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "スキル：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " サイト企画・設計は可能、プログラミングの基本知識あり"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "今回の立場：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 事業者として自社サイト制作"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "プロジェクト要件"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "サイト種別：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 自分のビジネスサイト（LUA BRANCA CONNECT）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "主要機能：",
+          "marks": ["strong"]
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - プロフィール"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - サービス紹介"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - ブログ・更新情報機能"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - お問い合わせフォーム"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "デザイン要件：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " モダンでプロフェッショナルな企業サイト"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "レスポンシブ：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 必須（スマートフォン対応）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "技術構成・インフラ構成"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "フロントエンド技術スタック"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "フレームワーク：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " Next.js 15.4.1 (App Router)"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "言語：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " TypeScript"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "スタイリング：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " Tailwind CSS"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "工数・コスト比較"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "従来制作"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "関係者：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 4者（お客様、ディレクター、デザイナー、コーダー）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "制作工数：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 171時間（20人日）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "初年度総額：952,160円",
+          "marks": ["strong"]
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "AI制作（Claude Code）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "関係者：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 1者（事業者のみ）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "実作業時間：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 14時間（1週間分散）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "初年度総額：38,000円",
+          "marks": ["strong"]
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "削減効果"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "コスト削減：96%減",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": "（952,160円 → 38,000円）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "listItem": "bullet",
+      "children": [
+        {
+          "_type": "span",
+          "text": "工数削減：92%減",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": "（171時間 → 14時間）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "まとめ"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "今回のClaude Codeを使った企業サイト制作体験は、私自身の価値観を大きく変える出来事でした。"
+        },
+        {
+          "_type": "span",
+          "text": "96%のコスト削減",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": "という圧倒的な効果を実現できました。"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "決して楽な道のりではありませんでしたが、"
+        },
+        {
+          "_type": "span",
+          "text": "従来なら絶対に不可能だったこと",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": "（ディレクターが一人でサイト公開まで完了）が現実になったのは、まさに時代の転換点を体感する瞬間でした。"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VS5e"
+    }
+  ],
+  "tags": [
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSHY"
+    },
+    {
+      "_type": "reference",
+      "_ref": "arqsrovgw4JV8yMAGg2IVU"
+    },
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSTS"
+    },
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSfM"
+    }
+  ]
+}

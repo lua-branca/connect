@@ -1,0 +1,35 @@
+{
+  "_id": "sPR0RMXZgUr7qoxEYQqbBY",
+  "_type": "blogPost",
+  "title": "ウェブディレクターがClaude Codeで企業サイトを構築してみた〜工数96%削減、コード0行の衝撃体験記〜",
+  "slug": {
+    "_type": "slug",
+    "current": "ai-website-development-experience"
+  },
+  "excerpt": "ウェブディレクターがClaude Codeを使って企業サイトを0から構築し、従来制作の96%コスト削減を実現した実体験レポート。TypeScriptエラーとの格闘、Vercelデプロイの試行錯誤、DNS設定の複雑さなど、つまづきポイントや制約も含めて正直にお伝えします。",
+  "body": "AI時代の到来により、ウェブ制作の現場は大きく変わろうとしています。特に「Claude Code」のようなAIコーディングツールの登場で、これまでプログラマーやコーダーに依存していた制作プロセスが根本的に変化する可能性が見えてきました。\n\n今回、ウェブディレクターの私が実際にClaude Codeを使って企業サイトを0から構築し、独自ドメインでの公開まで完了させた実体験をレポートします。結果的に**従来制作の96%コスト削減**を実現しましたが、決して楽な道のりではありませんでした。\n\nこの記事では、良い面だけでなく、つまづいたポイントや制約も含めて正直にお伝えします。",
+  "categories": [
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VS5e"
+    }
+  ],
+  "tags": [
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSHY"
+    },
+    {
+      "_type": "reference",
+      "_ref": "arqsrovgw4JV8yMAGg2IVU"
+    },
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSTS"
+    },
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSfM"
+    }
+  ]
+}

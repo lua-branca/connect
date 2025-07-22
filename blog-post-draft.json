@@ -1,0 +1,283 @@
+{
+  "_type": "blogPost",
+  "title": "ウェブディレクターがClaude Codeで企業サイトを構築してみた〜工数96%削減、コード0行の衝撃体験記〜",
+  "slug": {
+    "current": "ai-website-development-experience"
+  },
+  "excerpt": "ウェブディレクターがClaude Codeを使って企業サイトを0から構築し、従来制作の96%コスト削減を実現した実体験レポート。TypeScriptエラーとの格闘、Vercelデプロイの試行錯誤、DNS設定の複雑さなど、つまづきポイントや制約も含めて正直にお伝えします。",
+  "publishedAt": "2025-07-22T02:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "はじめに"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "AI時代の到来により、ウェブ制作の現場は大きく変わろうとしています。特に「Claude Code」のようなAIコーディングツールの登場で、これまでプログラマーやコーダーに依存していた制作プロセスが根本的に変化する可能性が見えてきました。"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "今回、ウェブディレクターの私が実際にClaude Codeを使って企業サイトを0から構築し、独自ドメインでの公開まで完了させた実体験をレポートします。結果的に"
+        },
+        {
+          "_type": "span",
+          "text": "従来制作の96%コスト削減",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": "を実現しましたが、決して楽な道のりではありませんでした。"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "この記事では、良い面だけでなく、つまづいたポイントや制約も含めて正直にお伝えします。"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "私の背景・前提条件"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "制作者プロフィール"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "• "
+        },
+        {
+          "_type": "span",
+          "text": "職歴：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " ウェブディレクター経験者"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "• "
+        },
+        {
+          "_type": "span",
+          "text": "スキル：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " サイト企画・設計は可能、プログラミングの基本知識あり"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "• "
+        },
+        {
+          "_type": "span",
+          "text": "今回の立場：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 事業者として自社サイト制作"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "text": "プロジェクト要件"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "• "
+        },
+        {
+          "_type": "span",
+          "text": "サイト種別：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 自分のビジネスサイト（LUA BRANCA CONNECT）"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "• "
+        },
+        {
+          "_type": "span",
+          "text": "主要機能：",
+          "marks": ["strong"]
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - プロフィール"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - サービス紹介"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - ブログ・更新情報機能"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "  - お問い合わせフォーム"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "• "
+        },
+        {
+          "_type": "span",
+          "text": "デザイン要件：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " モダンでプロフェッショナルな企業サイト"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "• "
+        },
+        {
+          "_type": "span",
+          "text": "レスポンシブ：",
+          "marks": ["strong"]
+        },
+        {
+          "_type": "span",
+          "text": " 必須（スマートフォン対応）"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VS5e"
+    }
+  ],
+  "tags": [
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSHY"
+    },
+    {
+      "_type": "reference",
+      "_ref": "arqsrovgw4JV8yMAGg2IVU"
+    },
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSTS"
+    },
+    {
+      "_type": "reference",
+      "_ref": "LoufT1DVxjE5SSAZX1VSfM"
+    }
+  ]
+}
