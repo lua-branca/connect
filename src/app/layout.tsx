@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://lua-branca.jp/og-image.png",
         width: 1200,
         height: 630,
         alt: "LUA BLANCA CONNECT - 小規模事業者のAI活用実践パートナー",

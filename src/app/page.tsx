@@ -13,9 +13,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: '小規模事業者のAI活用を成功に導く実践的パートナー | LUA BLANCA CONNECT',
     description: 'コンテンツ制作・プロジェクト管理の豊富な経験を活かし、小規模事業者のAI活用を成功に導きます。課題の見える化から運用定着まで継続的に伴走し、確実に成果を創出するコンサルティングサービスです。',
+    url: 'https://lua-branca.jp',
+    type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://lua-branca.jp/og-image.png',
         width: 1200,
         height: 630,
         alt: 'LUA BLANCA CONNECT - 小規模事業者のAI活用を成功に導く実践的パートナー',
