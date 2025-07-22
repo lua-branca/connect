@@ -4,6 +4,32 @@ import Link from 'next/link'
 import { format } from 'date-fns'
 import { ja } from 'date-fns/locale'
 import { Calendar, User, Tag } from 'lucide-react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI活用サポート情報 | LUA BLANCA CONNECT',
+  description: '課題解決から運用定着まで、AI活用の各段階で役立つ情報と事例をご紹介します。小規模事業者向けのAI導入ノウハウや成功事例を分かりやすく解説。',
+  openGraph: {
+    title: 'AI活用サポート情報 | LUA BLANCA CONNECT',
+    description: '課題解決から運用定着まで、AI活用の各段階で役立つ情報と事例をご紹介します。小規模事業者向けのAI導入ノウハウや成功事例を分かりやすく解説。',
+    url: 'https://lua-branca.jp/updates',
+    type: 'website',
+    images: [
+      {
+        url: 'https://lua-branca.jp/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'LUA BLANCA CONNECT - AI活用サポート情報',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI活用サポート情報 | LUA BLANCA CONNECT',
+    description: '課題解決から運用定着まで、AI活用の各段階で役立つ情報と事例をご紹介します。小規模事業者向けのAI導入ノウハウや成功事例を分かりやすく解説。',
+    images: ['https://lua-branca.jp/og-image.png'],
+  },
+}
 
 export default async function BlogPage() {
   const posts: BlogPost[] = await getAllPosts()
@@ -35,9 +61,9 @@ export default async function BlogPage() {
       <div className="max-w-7xl mx-auto">
         {/* ヘッダー */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4" style={{color: '#2D5A5A'}}>更新情報</h1>
+          <h1 className="text-4xl font-bold mb-4" style={{color: '#2D5A5A'}}>AI活用サポート情報</h1>
           <p className="text-lg max-w-2xl mx-auto" style={{color: '#2D5A5A', opacity: 0.8}}>
-            AI活用の最新トレンドや実事例、お役立ち情報をお届けします
+            課題解決から運用定着まで、AI活用の各段階で役立つ情報と事例をご紹介します
           </p>
         </div>
 
@@ -146,9 +172,9 @@ export default async function BlogPage() {
               /* 記事がない場合 */
               <div className="text-center py-16">
                 <div className="rounded-xl p-12" style={{background: 'linear-gradient(135deg, #E0F2F1 0%, #F0FFFE 100%)'}}>
-                  <h3 className="text-2xl font-bold mb-4" style={{color: '#2D5A5A'}}>更新情報を準備中です</h3>
+                  <h3 className="text-2xl font-bold mb-4" style={{color: '#2D5A5A'}}>AI活用サポート情報を準備中です</h3>
                   <p className="text-lg mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
-                    AI活用に関する最新情報や実事例を順次公開予定です。
+                    課題解決から運用定着まで、AI活用の各段階で役立つ情報と事例を順次公開予定です。
                   </p>
                   <p className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
                     公開まで今しばらくお待ちください。

@@ -360,8 +360,11 @@ export default async function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold" style={{color: '#2D5A5A'}}>最新の更新情報</h2>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4" style={{color: '#2D5A5A'}}>AI活用サポート情報</h2>
+              <p className="text-lg max-w-2xl mx-auto mb-6" style={{color: '#2D5A5A', opacity: 0.8}}>
+                課題解決から運用定着まで、AI活用の各段階で役立つ情報と事例をご紹介します
+              </p>
               <Link
                 href="/updates"
                 className="font-medium hover:underline"
@@ -446,7 +449,7 @@ export default async function Home() {
                 <div className="rounded-xl p-12" style={{background: 'linear-gradient(135deg, #E0F2F1 0%, #F0FFFE 100%)'}}>
                   <h3 className="text-2xl font-bold mb-4" style={{color: '#2D5A5A'}}>更新情報を準備中です</h3>
                   <p className="text-lg mb-4" style={{color: '#2D5A5A', opacity: 0.8}}>
-                    AI活用に関する最新情報や実事例を順次公開予定です。
+                    課題解決から運用定着まで、AI活用の各段階で役立つ情報と事例をご紹介します。
                   </p>
                   <p className="text-sm" style={{color: '#2D5A5A', opacity: 0.6}}>
                     公開まで今しばらくお待ちください。
